@@ -1,0 +1,21 @@
+Customer : getRestaurants(): String
+Customer : getProfileInfo(): String
+Customer : getOrder(): String
+Customer : getAddresses(): String
+Customer : logOut(): VoidAddress : displayAddresses() : String
+Address : addAddress() : Void
+Address : editAddress() : stringComment : displayComments() : String
+Comment : saveComments() : Void
+Comment : customerId() : VoidMenu : displayMenus() : String
+Menu : editAmount() : Void
+Menu : addOrder(String) : Void
+Menu : addFood(String) : VoidOrder : updateQuantity() : vpopmail_del_domain_ex(domain)
+Order : deleteItem() : Void
+Order : getCustomerInfo() : Void
+Order : getMenu() : VoidPayment : selectAddress() : Void
+Payment : deleteItem() : Void
+Payment : updateQuantity() : Void
+Payment : paymentType(String): Void
+Payment : getOrderId(): Void
+Payment : confirm() : VoidRestaurant : displayRestaurants(): String
+Restaurant : getMenu(): String
