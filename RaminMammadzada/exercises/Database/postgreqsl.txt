@@ -1,0 +1,50 @@
+\h - help
+\l - list databases
+\d - list tables
+\c - connect tables
+\q - quit
+
+kolayik=# CREATE TABLE developers(
+id serial PRIMARY KEY,
+name varchar(50),
+surname varchar(50),
+city_id integer,
+created_at timestamp DEFAULT current_timestamp
+)
+;
+CREATE TABLE
+
+kolayik=# \d
+                List of relations
+ Schema |       Name        |   Type   |  Owner   
+--------+-------------------+----------+----------
+ public | developers        | table    | postgres
+ public | developers_id_seq | sequence | postgres
+(2 rows)
+
+
+
+CREATE TABLE cities(id serial PRIMARY KEY, name varchar(50), country varchar(50), population integer, created_at timestamp DEFAULT current_timestamp);
+
+postgres=# INSERT INTO cities(name, country, population)
+postgres-# VALUES
+postgres-# ('Yverdon', 'Switcherland', 30000),
+postgres-# ('Istanul', 'Turkey', 4535),
+postgres-# ('IZmir', 'Turkey', 869435),
+postgres-# ('Ankara', 'Turkey', 853290),
+postgres-# ('Paris', 'USA', 54326),
+postgres-# ('Paris', 'France', 8690850);
+
+postgres=# select * from cities;
+ id |  name   |   country    | population |         created_at         
+----+---------+--------------+------------+----------------------------
+  1 | Yverdon | Switcherland |      30000 | 2017-07-10 13:38:56.795141
+  2 | Istanul | Turkey       |       4535 | 2017-07-10 13:38:56.795141
+  3 | IZmir   | Turkey       |     869435 | 2017-07-10 13:38:56.795141
+  4 | Ankara  | Turkey       |     853290 | 2017-07-10 13:38:56.795141
+  5 | Paris   | USA          |      54326 | 2017-07-10 13:38:56.795141
+  6 | Paris   | France       |    8690850 | 2017-07-10 13:38:56.795141
+  
+  
+  
+  
