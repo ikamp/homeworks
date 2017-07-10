@@ -1,0 +1,51 @@
+
+<script type="text/javascript">
+	var Teacher = function(firstName,lastName,Age,Gender,Interests,Subject,Lessons){
+		this.fname = firstName;
+		this.lname = lastName;
+		this.age = Age;
+		this.gender = Gender;
+		this.interest = Interests;
+		this.subj = Subject;
+		this.lessons = Lessons;
+	};
+	var lesson = {
+		id:'11111',
+		semester:'fall',
+		name:'aaaa'
+	},
+	lesson1 = {
+		id:'22222',
+		semester:'fall',
+		name:'bbbb'
+	};
+	var lessons = [lesson, lesson1];
+
+	Teacher.prototype.fullName = function(){
+			return this.fname + " " + this.lname;
+	}
+
+	Teacher.prototype.bio = function(){
+		console.log( teacher.fullName() + " is " +  this.age + " years old. They like " + this.interest);
+	}
+
+	Teacher.prototype.getPrefix = function(){
+		return this.gender == 'm' ? 'Mr.':'Mrs.';
+	}
+
+	Teacher.prototype.Greeting = function(){
+		console.log("hello.my name is "+teacher.getPrefix()+this.lname+ ", and I teach "+this.subj);
+	}
+
+	Teacher.prototype.getLessons = function(){
+		var lessonArray = this.lessons;
+			lessonArray.forEach(function(item){
+				console.log("id:" + item.id + " " + "semester:" + item.semester + " name:" + item.name);
+			})
+		}
+
+	var teacher = new Teacher("cem","ezgin",24,"m","sdasdad","asdfasdf",lessons);
+	teacher.bio();
+	teacher.Greeting();
+	teacher.getLessons();
+</script>

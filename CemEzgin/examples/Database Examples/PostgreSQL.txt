@@ -1,0 +1,9 @@
+***************
+sudo su postgres
+psql
+***************
+\h ->help
+\l ->list databases
+\d ->list tables
+\c ->connect ..
+\q ->quit
