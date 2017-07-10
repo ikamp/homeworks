@@ -1,0 +1,100 @@
+* First normal form
+* Second normal form
+* Third normal form
+
+SQL (Structured Query Language)
+---
+..::READ::..
+SELECT * FROM Customers
+
+SELECT * FROM Customers where (city = 'London' or country = 'Germany')
+
+SELECT * FROM Customers where (City = 'London' or Country = 'Germany') and postalcode is not null
+
+SELECT * FROM Customers 
+WHERE (City = 'London' or Country = 'Germany') 
+AND postalcode is not null
+ORDER BY Address
+AND ContactName IS NOT NULL
+
+
+
+..::CREATE::..
+INSERT INTO table_name (column1, column2, column3, ...)
+VALUES (value1, value2, value3, ...); 
+
+INSERT INTO table_name
+VALUES (value1, value2, value3, ...); 
+
+
+
+..::UPDATE::..
+UPDATE table_name
+SET column1= value1, value2, value3 where 'condition' // it is really important in practice
+
+- Write Select before you use Update.  // it is also important in practice
+SELECT * from Customers UPDATE Customers ....
+
+
+..::DELETE::..
+DELETE FROM table_name
+WHERE condition;
+
+
+
+SQL Functions:
+-------------
+SELECT MAX(CustomerId) FROM Customers;
+
+SELECT * FROM CUSTOMERS
+--UPDATE Customers
+--SET PostalCode = NULL
+WHERE City = 'London'
+
+UPDATE Customers
+SET PostalCode = NULL
+WHERE City = 'London'
+
+SELECT count(PostalCode) FROM Customers;
+
+SELECT *
+FROM Customers
+WHERE CustomersId = 3;
+
+SELECT *
+FROM Customers
+WHERE ContactName LIKE '__r%';
+
+SELECT *
+FROM Customers
+WHERE ContactName LIKE 'A%';
+
+SELECT City
+FROM Customers
+GROUP BY City;
+
+SELECT City, COUNT(*)
+FROM Customers
+
+WHERE PostalCode IS NOT NULL
+GROUP BY City
+ORDER BY COUNT(*) DESC;
+
+SELECT City, COUNT(*)
+FROM Customers
+WHERE PostalCode IS NOT NULL
+GROUP BY City
+HAVING COUNT(*)>2
+ORDER BY COUNT(*) DESC;
+
+
+
+--------------------------
+
+PGADMIN III
+sudo nano /etc/postgresql/9.6/main/pg-hba.conf
+sudo sevice postresql restart
+
+select * from developers left join developer_languages on developer_languages.id=developers.id where developer_languages.developer_id is null;
+select * from developers where id not in(select developer_id from developer_languages);select * from developers where not exists(select 1 from developer_languages where developer_languages.developer_id=developers.id);
+select * from developers where not exists(select developer_id from developer_languages where developer_languages.developer_id=developers.id);
