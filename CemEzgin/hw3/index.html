@@ -8,34 +8,46 @@
 <body>
 	<div id="container">
 		<label id="display" class="operation-display"></label><br/>
-		<button id="one" class="ui teal big circular button" onClick="buttonClick(1)">1</button>
-		<button id="two" class="ui teal big circular button" onClick="buttonClick(2)">2</button>
-		<button id="three" class="ui teal big circular button" onClick="buttonClick(3)">3</button>
-		<button id="plus" class="ui yellow big circular button" onClick="buttonClick('+')">+&nbsp;</button>
-		
+		<button id="one" class="ui teal big circular button" onClick="clickedNumbers[1].clickedButton()">1</button>
+		<button id="two" class="ui teal big circular button" onClick="clickedNumbers[2].clickedButton()">2</button>
+		<button id="three" class="ui teal big circular button" onClick="clickedNumbers[3].clickedButton()">3</button>
+		<button id="plus" class="ui yellow big circular button" onClick="buttonClickPlus.clickedButton()">+&nbsp;</button>
 		<br/>
-		<button id="four" class="ui teal big circular button" onClick="buttonClick(4)">4</button>
-		<button id="five" class="ui teal big circular button" onClick="buttonClick(5)">5</button>
-		<button id="six" class="ui teal big circular button" onClick="buttonClick(6)">6</button>
-		<button id="minus" class="ui yellow big circular button" onClick="buttonClick('-')">-&nbsp;</button>	
+		<button id="four" class="ui teal big circular button" onClick="clickedNumbers[4].clickedButton()">4</button>
+		<button id="five" class="ui teal big circular button" onClick="clickedNumbers[5].clickedButton()">5</button>
+		<button id="six" class="ui teal big circular button" onClick="clickedNumbers[6].clickedButton()">6</button>
+		<button id="minus" class="ui yellow big circular button" onClick="buttonClickMinus.clickedButton()">-&nbsp;</button>	
 		<br/>
-		<button id="seven" class="ui teal big circular button" onClick="buttonClick(7)">7</button>
-		<button id="eight" class="ui teal big circular button" onClick="buttonClick(8)">8</button>
-		<button id="nine" class="ui teal big circular button" onClick="buttonClick(9)">9</button>
-		<button id="division" class="ui yellow big circular button" onClick="buttonClick('/')">/&nbsp;</button>
+		<button id="seven" class="ui teal big circular button" onClick="clickedNumbers[7].clickedButton()">7</button>
+		<button id="eight" class="ui teal big circular button" onClick="clickedNumbers[8].clickedButton()">8</button>
+		<button id="nine" class="ui teal big circular button" onClick="clickedNumbers[9].clickedButton()">9</button>
+		<button id="division" class="ui yellow big circular button" onClick="buttonClickDiv.clickedButton()">/&nbsp;</button>
 		<br/>
-		<button id="zero" class="ui teal big circular button" onClick="buttonClick(0)">0</button>
-		<button id="clear" class="ui red big circular button" onClick="buttonClick('c')">C</button>
-		<button id="dot" class="ui yellow big circular button" onClick="buttonClick('.')">.&nbsp;</button>	
-		<button id="multiplication" class="ui yellow big circular button" onClick="buttonClick('*')">*&nbsp;</button>
+		<button id="zero" class="ui teal big circular button" onClick="clickedNumbers[0].clickedButton()">0</button>
+		<button id="clear" class="ui red big circular button" onClick="buttonClickClear.clickedButton()">C</button>
+		<button id="dot" class="ui yellow big circular button" onClick="buttonClickDot.clickedButton()">.&nbsp;</button>	
+		<button id="multiplication" class="ui yellow big circular button" onClick="buttonClickMult.clickedButton()">*&nbsp;</button>
 		<br/>
-		<button id="equal" class="ui grey big circular button" onClick="buttonClick('=')">=</button>
-
+		<button id="equal" class="ui grey big circular button" onClick="buttonClickEqual.clickedButton()">=</button>
 		<script type="text/javascript" src="scripts/script.js"></script>
 		<script type="text/javascript" src="scripts/plus.js"></script>
 		<script type="text/javascript" src="scripts/minus.js"></script>
 		<script type="text/javascript" src="scripts/multiplication.js"></script>
 		<script type="text/javascript" src="scripts/division.js"></script>
 	</div>
+	<script type="text/javascript">
+		var clickedNumbers = [];
+		for(var i = 0 ; i < 10 ; i++) {
+			var buttonClick = new ButtonClick(i);
+			clickedNumbers[i] = buttonClick;
+		}
+		var buttonClickPlus = new ButtonClick("+");
+		var buttonClickMinus = new ButtonClick("-");
+		var buttonClickDiv = new ButtonClick("/");
+		var buttonClickMult = new ButtonClick("*");
+		var buttonClickDot = new ButtonClick(".");
+		var buttonClickEqual = new ButtonClick("=");
+		var buttonClickClear = new ButtonClick("c");
+	</script>
 </body>
 </html>
