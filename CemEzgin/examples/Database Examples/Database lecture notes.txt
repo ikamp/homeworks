@@ -16,12 +16,12 @@ UPDATE
 -----
 UPDATE table_name
 SET column1 = value1, column2 = value2, ...
-WHERE condition;-->where condition çalýþtýrýlmadan select ile control edilmeli kesinlike boþ dönmemeli
+WHERE condition;-->for where condition before the run we should check with select condition it must not return empty or null value. 
 
 DELETE
 ------
 DELETE FROM table_name
-WHERE condition;-->where condition çalýþtýrýlmadan select ile control edilmeli kesinlike boþ dönmemeli
+WHERE condition;-->for where condition before the run we should check with select condition it must not return empty or null value.
 
 **********************************
 Matematical Operations
@@ -33,18 +33,18 @@ LIKE
 ---------------------------
 select * from customers
 WHERE ContactName LIKE 'Antonio%'
-----> _ specific karakter ile eþleþir ex:__a(3. harfi a olan) 
+----> _ specific karakter ile eþleþir ex:__a(the char which is 3rd one) 
 
 DISTINCT
 -----------------
-select COUNT(DISTINCT City) form Customer --> toplam farklý þehir sayýsý
-select * form Customer GROUP BY City ---> group by ýn içinde olan selectde de olmasý gerekli(bu query postgre de hatalý)
+select COUNT(DISTINCT City) form Customer --> total country number
+select * form Customer GROUP BY City ---> inside group by select should be also. (its mistake in postgresql)
 
 SELECT City, COUNT(*)
 FROM Customers 
 GROUP BY City
 HAVING COUNT(*)>2
-ORDER BY COUNT(*) DESC;----------------> 1 den fazla customer olan þehirler sýralý
+ORDER BY COUNT(*) DESC;----------------> More than 1 customer ordered.
 
 JOINS
 -----------------
@@ -54,13 +54,13 @@ from dev
 join city on city.id = dev.city_id
 where .....
 
-inner join->sadece kesiþimleri getirir
-Left,right join->bulabildiðini getir bulamadýðýný boþ getir(left yada right için).
-primary key yada unique bir deðer ile çalýþmýyorsak dikkatli olmak gerekli.
+inner join->just intersection
+Left,right join
+we should be carefull if we are not working with unique or primary key value.
 
 **********************************************
 RELATIONS
 -----------
 1:1
-1:N->1 þehirin 1 ülkesi 1 ülkenin 1den fazla þehri olur
-N:N->1 bir yazýlýmcý birden fazla dil bilebilir bir dil birden fazla dev tarafýndan bilinebilir.(ekstra ara relation tablosuna ihtiyaç var!)
+1:N->1 
+N:N->1 (we need an extra table!)
