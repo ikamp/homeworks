@@ -5,7 +5,7 @@ function buttonClick(number){
 	if(number=="c")
 		document.getElementById('display').innerHTML= "";
 }
-
+//For taking the numbers and operations from keyboard.
 function keyListen(event){
 	console.log(event.which);
 	if(event.which==48 || event.which==96){
@@ -40,6 +40,7 @@ function keyListen(event){
 		document.getElementById('display').innerHTML+='.';
 	}
 }
+//for taking operations and sending to operations clases from display when click equal button.
 function takeToArray(){
 	var char = document.getElementById('display').innerHTML;
 		for (var i = 0; i < char.length; i++) {
