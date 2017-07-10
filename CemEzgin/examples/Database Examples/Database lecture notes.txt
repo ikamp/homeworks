@@ -1,0 +1,66 @@
+Create
+Read
+Update
+Delete
+*-----------------------------*
+READ
+----
+Select * from Customers;
+SELECT * FROM Customers where (city="London" OR Country="Germany") AND PostalCode is not null ;
+
+CREATE
+-----
+Insert into Customers (column3,column5) values ("1","abc");
+
+UPDATE
+-----
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;-->where condition çalıştırılmadan select ile control edilmeli kesinlike boş dönmemeli
+
+DELETE
+------
+DELETE FROM table_name
+WHERE condition;-->where condition çalıştırılmadan select ile control edilmeli kesinlike boş dönmemeli
+
+**********************************
+Matematical Operations
+----------------------------------
+SELECT MAX(CustomerId) FROM Customers;
+SELECT COUNT(CustomerId) FROM Customers;
+
+LIKE
+---------------------------
+select * from customers
+WHERE ContactName LIKE 'Antonio%'
+----> _ specific karakter ile eşleşir ex:__a(3. harfi a olan) 
+
+DISTINCT
+-----------------
+select COUNT(DISTINCT City) form Customer --> toplam farklı şehir sayısı
+select * form Customer GROUP BY City ---> group by ın içinde olan selectde de olması gerekli(bu query postgre de hatalı)
+
+SELECT City, COUNT(*)
+FROM Customers 
+GROUP BY City
+HAVING COUNT(*)>2
+ORDER BY COUNT(*) DESC;----------------> 1 den fazla customer olan şehirler sıralı
+
+JOINS
+-----------------
+
+SELECT dev.name,city.name
+from dev
+join city on city.id = dev.city_id
+where .....
+
+inner join->sadece kesişimleri getirir
+Left,right join->bulabildiğini getir bulamadığını boş getir(left yada right için).
+primary key yada unique bir değer ile çalışmıyorsak dikkatli olmak gerekli.
+
+**********************************************
+RELATIONS
+-----------
+1:1
+1:N->1 şehirin 1 ülkesi 1 ülkenin 1den fazla şehri olur
+N:N->1 bir yazılımcı birden fazla dil bilebilir bir dil birden fazla dev tarafından bilinebilir.(ekstra ara relation tablosuna ihtiyaç var!)

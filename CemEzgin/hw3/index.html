@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>js Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style/button.css">
+	<link rel="stylesheet" type="text/css" href="style/style.css">
+</head>
+<body>
+	<div id="container">
+		<label id="display" class="operation-display"></label><br/>
+		<button id="one" class="ui teal big circular button" onClick="buttonClick(1)">1</button>
+		<button id="two" class="ui teal big circular button" onClick="buttonClick(2)">2</button>
+		<button id="three" class="ui teal big circular button" onClick="buttonClick(3)">3</button>
+		<button id="plus" class="ui yellow big circular button" onClick="buttonClick('+')">+&nbsp;</button>
+		
+		<br/>
+		<button id="four" class="ui teal big circular button" onClick="buttonClick(4)">4</button>
+		<button id="five" class="ui teal big circular button" onClick="buttonClick(5)">5</button>
+		<button id="six" class="ui teal big circular button" onClick="buttonClick(6)">6</button>
+		<button id="minus" class="ui yellow big circular button" onClick="buttonClick('-')">-&nbsp;</button>	
+		<br/>
+		<button id="seven" class="ui teal big circular button" onClick="buttonClick(7)">7</button>
+		<button id="eight" class="ui teal big circular button" onClick="buttonClick(8)">8</button>
+		<button id="nine" class="ui teal big circular button" onClick="buttonClick(9)">9</button>
+		<button id="division" class="ui yellow big circular button" onClick="buttonClick('/')">/&nbsp;</button>
+		<br/>
+		<button id="zero" class="ui teal big circular button" onClick="buttonClick(0)">0</button>
+		<button id="clear" class="ui red big circular button" onClick="buttonClick('c')">C</button>
+		<button id="dot" class="ui yellow big circular button" onClick="buttonClick('.')">.&nbsp;</button>	
+		<button id="multiplication" class="ui yellow big circular button" onClick="buttonClick('*')">*&nbsp;</button>
+		<br/>
+		<button id="equal" class="ui grey big circular button" onClick="buttonClick('=')">=</button>
+
+		<script type="text/javascript" src="scripts/script.js"></script>
+		<script type="text/javascript" src="scripts/plus.js"></script>
+		<script type="text/javascript" src="scripts/minus.js"></script>
+		<script type="text/javascript" src="scripts/multiplication.js"></script>
+		<script type="text/javascript" src="scripts/division.js"></script>
+	</div>
+</body>
+</html>

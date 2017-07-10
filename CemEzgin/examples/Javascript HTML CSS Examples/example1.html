@@ -1,0 +1,18 @@
+<script type="text/javascript">
+	var items = ['item1','item2','item3'],copy=[];
+	items.forEach(function(element){
+		copy.push(element);
+	});
+	//console.log(copy);
+</script>
+<script type="text/javascript">
+	var Polygon = function(h,w){
+		this.height = h;
+		this.width = w;
+	};
+	Polygon.prototype.sayHi = function(){
+		//alert('hi,size is' + this.height + ',' + this.width);
+	}
+	var polygon = new Polygon(10, 20);
+	polygon.sayHi();
+</script>
