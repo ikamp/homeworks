@@ -1,0 +1,32 @@
+#firstH1
+{
+    color: red;
+}
+#firstH2
+{
+    color: brown;
+}
+ul :first-child
+{
+    color: aqua;
+}
+ul :last-child
+{
+    color: blueviolet;
+}
+#liSecond
+{
+    color: chartreuse;
+}
+#container
+{
+    background-color: aquamarine;
+    height: 400px;
+    width: 600px;
+}
+#containerSecond
+{
+    background-color: chocolate;
+    height: 200px;
+    width: 300px;
+}
