@@ -4,8 +4,8 @@ namespace FoodBasket;
 class MenuItem
 {
     protected $id;
-    protected $itemId;
-    protected $menuId;
+    protected $name;
+    protected $price;
 
     /**
      * @return mixed
@@ -26,46 +26,46 @@ class MenuItem
     /**
      * @return mixed
      */
-    public function getItemId()
+    public function getName()
     {
-        return $this->itemId;
+        return $this->name;
     }
 
     /**
-     * @param mixed $itemId
+     * @param mixed $name
      */
-    public function setItemId($itemId)
+    public function setName($name)
     {
-        $this->itemId = $itemId;
+        $this->name = $name;
     }
 
     /**
      * @return mixed
      */
-    public function getMenuId()
+    public function getPrice()
     {
-        return $this->menuId;
+        return $this->price;
     }
 
     /**
-     * @param mixed $menuId
+     * @param mixed $price
      */
-    public function setMenuId($menuId)
+    public function setPrice($price)
     {
-        $this->menuId = $menuId;
+        $this->price = $price;
     }
 
-    public function addMenuItem()
-    {
-
-    }
-
-    public function setMenuItem()
+    public function addItem()
     {
 
     }
 
-    public function dropMenuItem()
+    public function setItem()
+    {
+
+    }
+
+    public function dropItem()
     {
 
     }

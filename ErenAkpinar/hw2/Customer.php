@@ -1,4 +1,5 @@
 <?php
+
 namespace FoodBasket;
 
 class Customer extends Person
@@ -36,5 +37,10 @@ class Customer extends Person
     public function setPoint($point)
     {
         $this->point = $point;
+    }
+
+    public function register()
+    {
+
     }
 }

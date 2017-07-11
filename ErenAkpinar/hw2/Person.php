@@ -6,7 +6,7 @@ abstract class Person
     protected $id;
     protected $name;
     protected $email;
-    protected $pass;
+    protected $password;
     protected $accessType;
 
     /**
@@ -60,17 +60,17 @@ abstract class Person
     /**
      * @return mixed
      */
-    public function getPass()
+    public function getPassword()
     {
-        return $this->pass;
+        return $this->password;
     }
 
     /**
-     * @param mixed $pass
+     * @param mixed $password
      */
-    public function setPass($pass)
+    public function setPassword($password)
     {
-        $this->pass = $pass;
+        $this->password = $password;
     }
 
     /**
@@ -94,10 +94,6 @@ abstract class Person
 
     }
 
-    public function register()
-    {
-
-    }
     public function updateProfile()
     {
 
