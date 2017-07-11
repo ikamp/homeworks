@@ -1,39 +1,37 @@
 <?php
-
-class Restaurant{
-
+class Restaurant {
     private $id;
     private $name;
     private $city;
     private $district;
     private $rate;
 
-    public function getRestId()
+    public function getRestaurantId()
     {
         return $this->id;
     }
 
-    public function setRestId($id)
+    public function setRestaurantId($id)
     {
         $this->rest_id=$id;
     }
 
-    public function getRestName()
+    public function getRestaurantName()
     {
         return $this->name;
     }
 
-    public function setRestName($name)
+    public function setRestaurantName($name)
     {
         $this->rest_name=$name;
     }
 
-    public function getRestCity()
+    public function getRestaurantCity()
     {
         return $this->city;
     }
 
-    public function setRestCity($city)
+    public function setRestaurantCity($city)
     {
         $this->rest_city=$city;
     }
@@ -58,5 +56,4 @@ class Restaurant{
         $this->rate=$rate;
     }
 }
-
 ?>

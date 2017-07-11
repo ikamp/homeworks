@@ -1,10 +1,9 @@
 <?php
-
-class FoodList {  
- 
+class Food {  
     private $id;
     private $foodName;
     private $price;
+
     /**
      * @return mixed
      */
@@ -53,12 +52,9 @@ class FoodList {
         $this->price = $price;
     }
 
-
     public function foodSelect()
     {
-        $selectedFood = array($this->id,$this->foodName,$this->price);
-        return $selectedFood;
+        
     }
 }
-
 ?>

@@ -1,14 +1,12 @@
 <?php
-
-class Users{
-
+class User {
     private $id;
     private $name;
     private $email;
-    private $pw;
+    private $password;
     private $address;
     private $district;
-
+    
     /**
      * @return mixed
      */
@@ -28,17 +26,17 @@ class Users{
     /**
      * @return mixed
      */
-    public function getPw()
+    public function getPassword()
     {
         return $this->pw;
     }
 
     /**
-     * @param mixed $pw
+     * @param mixed $password
      */
-    public function setPw($pw)
+    public function setPassword($password)
     {
-        $this->pw = $pw;
+        $this->password = $password;
     }
 
     /**
@@ -105,5 +103,4 @@ class Users{
         $this->id = $id;
     }
 }
-
 ?>

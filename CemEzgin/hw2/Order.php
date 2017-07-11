@@ -1,7 +1,5 @@
 <?php
-
-class OrderDetail{
-
+class Order {
     private $totalprice;
     private $paymentMethod;
     private $promoCode;
@@ -59,5 +57,4 @@ class OrderDetail{
 
     }
 }
-
 ?>
