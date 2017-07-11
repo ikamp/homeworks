@@ -3,24 +3,24 @@
 
 class Admin {
 
-    protected $adminName;
+    protected $name;
     protected $password;
     protected $email;
 
     /**
      * @return mixed
      */
-    public function getAdminName()
+    public function getName()
     {
-        return $this->adminName;
+        return $this->name;
     }
 
     /**
-     * @param mixed $adminName
+     * @param mixed $name
      */
-    public function setAdminName($adminName)
+    public function setName($name)
     {
-        $this->adminName = $adminName;
+        $this->name = $name;
     }
 
     /**
@@ -53,11 +53,6 @@ class Admin {
     public function setPassword($password)
     {
         $this->password = $password;
-    }
-
-    public function deleteCustomer()
-    {
-
     }
 
 }

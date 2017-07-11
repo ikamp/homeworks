@@ -2,40 +2,41 @@
 
 class Restaurant {
 
-    protected $restaurantName;
-    protected $restaurantId;
+    protected $id;
+    protected $name;
     protected $address;
     protected $phone;
 
     /**
      * @return mixed
      */
-    public function getRestaurantName()
+    public function getId()
     {
-        return $this->restaurantName;
+        return $this->id;
     }
 
     /**
-     * @param mixed $restaurantName
+     * @param mixed $id
      */
-    public function setRestaurantName($restaurantName)
+    public function setId($id)
     {
-        $this->restaurantName = $restaurantName;
+        $this->id = $id;
     }
+
     /**
      * @return mixed
      */
-    public function getRestaurantId()
+    public function getName()
     {
-        return $this->restaurantId;
+        return $this->name;
     }
 
     /**
-     * @param mixed $restaurantId
+     * @param mixed $name
      */
-    public function setRestaurantId($restaurantId)
+    public function setName($name)
     {
-        $this->restaurantId = $restaurantId;
+        $this->name = $name;
     }
 
     /**

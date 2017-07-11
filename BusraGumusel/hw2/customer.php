@@ -23,7 +23,7 @@ class Customer {
      */
     public function setId($id)
     {
-        $this->userId = $id;
+        $this->id = $id;
     }
 
     /**
@@ -39,7 +39,7 @@ class Customer {
      */
     public function setName($name)
     {
-        $this->userName = $name;
+        $this->name = $name;
     }
 
     /**
