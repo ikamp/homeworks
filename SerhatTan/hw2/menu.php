@@ -1,32 +1,39 @@
 <?php
 
 class Menu {
-	private (Int)$amount;
-	private (string)$foodTitle;
-	private (string)$foodDetail;
-	private (string)$foodType;
-	private (string)$img;
-	private (float)$price;
+    /** @amount Integer */
+    private $amount;
+    /** @foodTitle string */
+    private $foodTitle;
+    /** @foodDetail string */
+    private $foodDetail;
+    /** @foodType string */
+    private $foodType;
+    /** @img string */
+    private $img;
+    /** @price Integer */
+    private $price;
 
-	function displayMenus()
-	{
-		return (string)$returnValue;
-	}
+    private function displayMenus()
+    {
+        /** @return string */
+        return $returnValue;
+    }
 
-	function editAmount(): void
-	{
+    private function editAmount(): void
+    {
 
-	}
+    }
 
-	function addOrder((string)$parameter): void
-	{
+    private function addOrder((string)$parameter): void
+    {
 
-	}
+    }
 
-	function addFood((string)$parameter): void
-	{
+    private function addFood((string)$parameter): void
+    {
 
-	}
+    }
 }
 
 ?>

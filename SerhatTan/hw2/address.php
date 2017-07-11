@@ -1,25 +1,27 @@
 <?php
 
 class Address extends Customer {
-	private (string)$customerId;
-	private (string)$addressTitle;
-	private (string)$addressDetail;
-	private (string)$customerTelNumber;
+    /** @$addressTitle string  */
+    private $addressTitle;
+    /** @addressDetail string */
+    private $addressDetail;
+    /** @customerTelNumber string */
+    private $customerTelNumber;
 
-	function displayAddresses()
-	{
-		return (string)$returnValue;
-	}
+    private function displayAddresses()
+    {   /** @return string */
+        return $returnValue;
+    }
 
-	function editAddress()
-	{
-		return (string)$returnValue;
-	}
+    private function editAddress()
+    {   /** @return string */
+        return $returnValue;
+    }
 
-	function addAddress(): void
-	{
+    private function addAddress(): void
+    {
 
-	}
+    }
 }
 
 ?>

@@ -1,38 +1,48 @@
 <?php
 
 class Customer {
-	private (Int)$customerId;
-	private (string)$name;
-	private (string)$surName;
-	private (string)$email;
-	private (string)$password;
-	private (string)$city;
-	private $birthday = date("F j, Y, g:i a");
+    /** @customerId Integer */
+    private $customerId;
+    /** @name string */
+    private $name;
+    /** @surName string */
+    private $surName;
+    /** @email string */
+    private $email;
+    /** @password string */
+    private $password;
+    /** @city string */
+    private $city;
+    private $birthday;
 
-	function getRestaurants()
-	{
-		return (string)$returnValue;
-	}
+    private function getRestaurants()
+    {
+        /** @return string */
+       return $returnValue;
+   }
 
-	function getProfileInfo()
-	{
-		return (string)$returnValue;
-	}
+   protected function getProfileInfo()
+   {
+        /** @return string */
+       return $returnValue;
+   }
 
-	function getOrder()
-	{
-		return (string)$returnValue;
-	}
+   private function getOrder()
+   {
+        /** @return string */
+       return $returnValue;
+   }
 
-	function getAddresses()
-	{
-		return (string)$returnValue;
-	}
+   protected function getAddresses()
+   {
+        /** @return string */
+       return $returnValue;
+   }
 
-	function logOut(): void
-	{
+   private function logOut(): void
+   {
 
-	}
+   }
 
 }
 
