@@ -1,13 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: eren
- * Date: 06/07/2017
- * Time: 21:29
- */
-
 namespace FoodBasket;
-
 
 class Menu
 {
