@@ -2,9 +2,26 @@
 
 class Menu {
 
+    protected $id;
     protected $price;
-    protected $menuId;
     protected $restaurantId;
+    protected $foodName;
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     /**
      * @return mixed
@@ -25,22 +42,6 @@ class Menu {
     /**
      * @return mixed
      */
-    public function getMenuId()
-    {
-        return $this->menuId;
-    }
-
-    /**
-     * @param mixed $menuId
-     */
-    public function setMenuId($menuId)
-    {
-        $this->menuId = $menuId;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getRestaurantId()
     {
         return $this->restaurantId;
@@ -53,4 +54,21 @@ class Menu {
     {
         $this->restaurantId = $restaurantId;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getFoodName()
+    {
+        return $this->foodName;
+    }
+
+    /**
+     * @param mixed $foodName
+     */
+    public function setFoodName($foodName)
+    {
+        $this->foodName = $foodName;
+    }
+
 }

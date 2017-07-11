@@ -2,7 +2,7 @@
 
 class Order {
     
-    protected $orderId;
+    protected $id;
     protected $createdTime;
     protected $status;
     protected $customerId;
@@ -11,17 +11,17 @@ class Order {
     /**
      * @return mixed
      */
-    public function getOrderId()
+    public function getId()
     {
-        return $this->orderId;
+        return $this->id;
     }
 
     /**
-     * @param mixed $orderId
+     * @param mixed $id
      */
-    public function setOrderId($orderId)
+    public function setId($id)
     {
-        $this->orderId = $orderId;
+        $this->id = $id;
     }
 
     /**
@@ -65,7 +65,7 @@ class Order {
     }
 
     /**
-     * @param mixed $userId
+     * @param mixed $customerId
      */
     public function setCustomerId($customerId)
     {
@@ -78,6 +78,14 @@ class Order {
     public function getMenuId()
     {
         return $this->menuId;
+    }
+
+    /**
+     * @param mixed $menuId
+     */
+    public function setMenuId($menuId)
+    {
+        $this->menuId = $menuId;
     }
 
 }
