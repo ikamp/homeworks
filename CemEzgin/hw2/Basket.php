@@ -2,7 +2,8 @@
 class Basket {
     private $id;
     private $allFood = [];
-    
+    private $selectedFoods;
+
     /**
      * @return array
      */
@@ -34,8 +35,7 @@ class Basket {
     {
         $this->selectedFoods = $selectedFoods;
     }
-    private $selectedFoods;
-
+   
     /**
      * @return mixed
      */
