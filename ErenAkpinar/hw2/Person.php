@@ -1,14 +1,5 @@
 <?php
-
-/**
- * Created by PhpStorm.
- * User: eren
- * Date: 06/07/2017
- * Time: 20:47
- */
-
 namespace FoodBasket;
-
 
 abstract class Person
 {
