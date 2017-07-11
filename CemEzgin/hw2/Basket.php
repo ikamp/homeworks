@@ -52,7 +52,7 @@ class Basket {
         $this->id = $id;
     }
 
-    public function basketConfrim()
+    public function basketConfirm()
     {
 
     }
