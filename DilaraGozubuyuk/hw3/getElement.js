@@ -1,5 +1,5 @@
 var Elements = function(){
- 
+    //
 };
 
 Elements.prototype.getElements = function(variable){
@@ -16,7 +16,6 @@ Elements.prototype.getElements = function(variable){
        idElement = document.getElementsTagName(variable);
    }else
 	idElement = false;
-
    return idElement;
   
 }
