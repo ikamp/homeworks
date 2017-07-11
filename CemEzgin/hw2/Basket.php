@@ -1,9 +1,7 @@
 <?php
-
-class Basket extends FoodList{
-
+class Basket {
     private $id;
-    private $allFood=array();
+    private $allFood = [];
     
     /**
      * @return array
@@ -20,6 +18,7 @@ class Basket extends FoodList{
     {
         $this->allFood = $allFood;
     }
+
     /**
      * @return mixed
      */
@@ -52,10 +51,10 @@ class Basket extends FoodList{
     {
         $this->id = $id;
     }
+
     public function basketConfrim()
     {
 
     }
 }
-
 ?>
