@@ -1,38 +1,40 @@
 <?php
 
 class Payment {
-	private (Int)$orderId;
-	private (string)$paymentType;
+    /** @orderId Int */
+    private $orderId;
+    /** @paymentType string */
+    private $paymentType;
 
-	function selectAddress(): void
-	{
+    private function selectAddress(): void
+    {
 
-	}
+    }
 
-	function deleteItem(): void
-	{
+    private function deleteItem(): void
+    {
 
-	}
+    }
 
-	function updateQuantity(): void
-	{
+    private function updateQuantity(): void
+    {
 
-	}
+    }
 
-	function paymentType((string)$parameter): void
-	{
+    private function paymentType($parameter): void
+    {
 
-	}
+    }
 
-	function confirm(): void
-	{
+    private function confirm(): void
+    {
 
-	}
+    }
 
-	function getOrderId()
-	{
-		return $this->$orderId = new Order();
-	}
+    private function getOrderId()
+    {
+        return $this->$orderId = new Order();
+    }
 }
 
 ?>

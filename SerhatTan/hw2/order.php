@@ -1,30 +1,34 @@
 <?php
 
 class Order {
-	private (Int)$orderId;
-	private (Int)$menuId;
-	private (Int)$customerId;
-	private (Int)$quantity;
+    /** @orderId Integer */
+    private $orderId;
+    /** @menuId Integer */
+    private $menuId;
+    /** @customerId Integer */
+    private $customerId;
+    /** @quantity Integer */
+    private $quantity;
 
-	function updateQuantity(): void
-	{
+    private function updateQuantity(): void
+    {
 
-	}
+    }
 
-	function deleteItem(): void
-	{
+    private function deleteItem(): void
+    {
 
-	}
+    }
 
-	function getCustomerInfo()
-	{
-		return $this->customerId = new Customer();
-	}
+    private function getCustomerInfo()
+    {
+        return $this->customerId = new Customer();
+    }
 
-	function getMenu()
-	{
-		return $this->menuId = new Menu();
-	}
+    private function getMenu()
+    {
+        return $this->menuId = new Menu();
+    }
 }
 
 ?>

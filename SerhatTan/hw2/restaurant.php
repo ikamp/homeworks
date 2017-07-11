@@ -1,28 +1,34 @@
 <?php
 
 class Restaurant {
-	private (Int)$menuId;
-	private (Int)$commentId;
-	private (string)$name;
-	private (string)$district;
-	private (float)$averageRate;
-	private (float)$minPrice;
+    /** @commentId Integer */
+    private $commentId;
+    /** @name string */
+    private $name;
+    /** @district string */
+    private $district;
+    /** @averageRate float */
+    private $averageRate;
+    /** @minPrice float */
+    private $minPrice;
 
-	function displayRestaurants()
-	{
-		return (string)$returnValue;
-	}
+    private function displayRestaurants()
+    {
+        /** @return string */
+        return $returnValue;
+    }
 
-	function getMenu()
-	{
-		$this->$menuId = new Menu();
-		return (string)$this->$menuId;
-	}
+    private function getMenu()
+    {
+        $this->$menuId = new Menu();
+        /** @return string */
+        return $this->$menuId;
+    }
 
-	function getComment()
-	{
-		return $this->$commentId = new Comments();
-	}
+    private function getComment()
+    {
+        return $this->$commentId = new Comments();
+    }
 }
 
 ?>
