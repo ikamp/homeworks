@@ -7,7 +7,7 @@ class Payment
     protected $price;
     protected $date;
     protected $bank;
-    protected $acccountNumber;
+    protected $accountNumber;
     protected $status;
 
     /**
@@ -77,17 +77,17 @@ class Payment
     /**
      * @return mixed
      */
-    public function getAcccountNumber()
+    public function getAccountNumber()
     {
-        return $this->acccountNumber;
+        return $this->accountNumber;
     }
 
     /**
-     * @param mixed $acccountNumber
+     * @param mixed $accountNumber
      */
-    public function setAcccountNumber($acccountNumber)
+    public function setAccountNumber($accountNumber)
     {
-        $this->acccountNumber = $acccountNumber;
+        $this->accountNumber = $accountNumber;
     }
 
     /**
