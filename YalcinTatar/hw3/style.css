@@ -1,0 +1,48 @@
+#topscreen{
+    width: 400px;
+    height: 500px;
+    border: 5px solid black;
+    background-color: lightgray;
+    position: absolute;
+    margin:150px;
+    margin-left:700px;
+    border-radius:10px;
+    box-shadow: 10px 10px 5px #888888;
+
+}
+#resultscreen{
+    width: 270px;
+    height: 30px;
+    margin:10px 10px;
+    border: 4px solid slategray ;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px #888888;
+    background-color: darkgray;
+
+}
+#clearbutton{
+    background-color: steelblue;
+    box-shadow: 5px 5px 20px #888888;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+    font-size: large;
+    margin-left: 5px;
+    width: 75px;
+    height: 40px;
+    border: 4px solid slategray ;
+    margin-top: 20px;
+
+}
+
+.numbers{
+    margin-left: 17px;
+    width: 75px;
+    height: 75px;
+    border: 4px solid slategray ;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: large;
+    margin-top: 20px;
+
+}
