@@ -1,0 +1,58 @@
+*
+{
+    margin: 0px;
+    padding: 0px;
+
+}
+.wrapper
+{
+
+
+}
+.keyContainer
+{
+    margin-left: 40%;
+}
+.button
+{
+    height: 50px;
+    width: 70px;
+}
+#calcScreen
+{
+  background-color: #5cb3fd;
+    height: 50px;
+    width: 300px;
+
+
+}
+.smaller
+{
+    height: 500px;
+    width: 500px;
+    display: block;
+    text-align: center;
+}
+#calcScreen
+{
+    background-color: #5cb3fd;
+    height: 50px;
+    width: 300px;
+    float: right;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+    padding: 10px;
+
+
+}
+#button04
+{
+    float: left;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.button
+{
+    margin-bottom: 5px;
+}
