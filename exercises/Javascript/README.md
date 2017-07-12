@@ -1,1 +1,0 @@
-Javascript examples and notes
