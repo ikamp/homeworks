@@ -1,0 +1,66 @@
+Create
+Read
+Update
+Delete
+*-----------------------------*
+READ
+----
+Select * from Customers;
+SELECT * FROM Customers where (city="London" OR Country="Germany") AND PostalCode is not null ;
+
+CREATE
+-----
+Insert into Customers (column3,column5) values ("1","abc");
+
+UPDATE
+-----
+UPDATE table_name
+SET column1 = value1, column2 = value2, ...
+WHERE condition;-->for where condition before the run we should check with select condition it must not return empty or null value. 
+
+DELETE
+------
+DELETE FROM table_name
+WHERE condition;-->for where condition before the run we should check with select condition it must not return empty or null value.
+
+**********************************
+Matematical Operations
+----------------------------------
+SELECT MAX(CustomerId) FROM Customers;
+SELECT COUNT(CustomerId) FROM Customers;
+
+LIKE
+---------------------------
+select * from customers
+WHERE ContactName LIKE 'Antonio%'
+----> _ specific karakter ile eþleþir ex:__a(the char which is 3rd one) 
+
+DISTINCT
+-----------------
+select COUNT(DISTINCT City) form Customer --> total country number
+select * form Customer GROUP BY City ---> inside group by select should be also. (its mistake in postgresql)
+
+SELECT City, COUNT(*)
+FROM Customers 
+GROUP BY City
+HAVING COUNT(*)>2
+ORDER BY COUNT(*) DESC;----------------> More than 1 customer ordered.
+
+JOINS
+-----------------
+
+SELECT dev.name,city.name
+from dev
+join city on city.id = dev.city_id
+where .....
+
+inner join->just intersection
+Left,right join
+we should be carefull if we are not working with unique or primary key value.
+
+**********************************************
+RELATIONS
+-----------
+1:1
+1:N->1 
+N:N->1 (we need an extra table!)

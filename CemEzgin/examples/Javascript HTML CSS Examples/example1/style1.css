@@ -1,0 +1,24 @@
+h1{
+	color: red;
+}
+h2{
+	color: red;
+}
+
+#c1{
+	color:purple;
+}
+#c2{
+	color:orange;
+}
+#c3{
+	color:yellow;
+}
+button{
+	background-color: darkblue;
+	color: yellow;
+}
+#container{
+border: 1px solid red;
+padding: 20px;
+}
