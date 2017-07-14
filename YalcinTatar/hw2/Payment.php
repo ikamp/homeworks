@@ -1,11 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yalcin
- * Date: 07.07.2017
- * Time: 07:00
- */
-
 
 class Payment extends OrderDetails
 {
@@ -14,8 +7,6 @@ class Payment extends OrderDetails
     private $dateOfExpiry;
     private $securityNumber;
     private $paymentOption;
-
-
     /**
      * @return mixed
      */

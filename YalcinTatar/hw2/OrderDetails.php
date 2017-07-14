@@ -1,11 +1,6 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yalcin
- * Date: 07.07.2017
- * Time: 06:56
- */
-abstract class OrderDetails
+
+class OrderDetails
 {
     protected $orderSummary;
     protected $address;
@@ -75,7 +70,4 @@ abstract class OrderDetails
     {
         $this->TotalPrice = $TotalPrice;
     }
-
-
-
 }

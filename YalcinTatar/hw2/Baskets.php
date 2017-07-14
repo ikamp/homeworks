@@ -1,14 +1,7 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yalcin
- * Date: 07.07.2017
- * Time: 06:38
- */
-class Basket extends Items
+class Baskets
 {
-    protected $BasketId;
-
+    protected $basketId;
     protected $itemName;
     protected $itemPrice;
 
@@ -17,15 +10,15 @@ class Basket extends Items
      */
     public function getBasketId()
     {
-        return $this->BasketId;
+        return $this->basketId;
     }
 
     /**
      * @param mixed $BasketId
      */
-    public function setBasketId($BasketId)
+    public function setBasketId($basketId)
     {
-        $this->BasketId = $BasketId;
+        $this->BasketId = $basketId;
     }
 
     /**
@@ -59,11 +52,4 @@ class Basket extends Items
     {
         $this->itemPrice = $itemPrice;
     }
-
-
-
-
-
-
-
 }
