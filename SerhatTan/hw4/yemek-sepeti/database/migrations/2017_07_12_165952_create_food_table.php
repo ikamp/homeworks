@@ -18,10 +18,8 @@ class CreateFoodTable extends Migration
             $table->integer('restaurantid');
             $table->string('name');
             $table->float('price');
-            $table->string('description');
-            $table->timestamps();
+            $table->text('description');
         });
-
         Schema::table('food', function($table) {
             $table->foreign('restaurantid')->references('id')->on('restaurant');
      });

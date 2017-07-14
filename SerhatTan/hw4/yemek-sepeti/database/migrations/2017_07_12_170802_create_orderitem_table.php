@@ -15,10 +15,17 @@ class CreateOrderitemTable extends Migration
     {
         Schema::create('orderitem', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('orderid')->index();
-            $table->integer('foodid')->index();
+            $table->integer('orderid');
+            $table->integer('foodid');
+            $table->float('price');
             $table->integer('quantity');
             $table->timestamps();
+        });
+        Schema::table('orderitem', function($table) {
+            $table->foreign('orderid')->references('id')->on('order');
+        });
+        Schema::table('orderitem', function($table) {
+            $table->foreign('foodid')->references('id')->on('food');
         });
     }
 

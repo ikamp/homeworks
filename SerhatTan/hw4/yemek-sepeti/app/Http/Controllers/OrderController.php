@@ -14,19 +14,19 @@ class OrderController extends Controller
         return response()->json($orders);
     }
 
-    public function create(Request $request, $userId)
+    public function create(Request $request)
     {
         $order = new Order();
         $orderitem = new OrderItem();
-        $order->userid = $userId;
-        $order->date = date('Y-m-d H:i:s');
+        $order->userid = 4;
         $order->save();
-        for ($i = 0; $i < count($request->Items); $i++) { 
+        foreach ($request->items as $item) {
             $orderitem->orderid = $order->id;
-            $orderitem->foodid = $request->Items[$i]['foodid'];
-            $orderitem->quantity = $request->Items[$i]['quantity'];
+            $orderitem->foodid = $item['foodid'];
+            $orderitem->price = $item['price'];
+            $orderitem->quantity = $item['quantity'];
             $orderitem->save();
         }
-        return Order::all();
+        return "Sipariş başarıyla oluşturuldu";
     }
 }

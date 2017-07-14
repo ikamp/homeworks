@@ -19,4 +19,4 @@ Route::get('/user','UserController@login');
 Route::get('/restaurants','RestaurantController@list');
 Route::get('/foods/{restaurantId}','FoodController@list');
 Route::get('/orders/{userId}','OrderController@list');
-Route::post('/orders/{userId}/create', 'OrderController@create');
+Route::post('/orders/create', 'OrderController@create');

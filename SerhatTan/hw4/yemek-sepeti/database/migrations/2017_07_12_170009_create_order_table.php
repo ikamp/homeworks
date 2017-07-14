@@ -16,8 +16,10 @@ class CreateOrderTable extends Migration
         Schema::create('order', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('userid');
-            $table->date('date');
             $table->timestamps();
+        });
+        Schema::table('order', function($table) {
+            $table->foreign('userid')->references('id')->on('users');
         });
     }
 
