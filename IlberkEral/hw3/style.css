@@ -1,0 +1,133 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font: bold 14px Arial, sans-serif;
+}
+
+body {
+    background: #777;
+    background: -webkit-radial-gradient(center, ellipse cover, #eeeeee 0%,#cccccc 100%);
+}
+
+h1 {
+    color: #fff;
+    font-size: 34px;
+}
+
+h2 {
+    color: #fff;
+}
+
+#calculator {
+    width: 300px;
+	height: auto;
+	margin: 100px auto;
+	padding: 10px;
+	background: #9dd2ea;
+	border-radius: 3px;
+	box-shadow: 0px 4px #009de4, 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+
+#result {
+    box-shadow: 0px 4px #EEEC93;
+    border-radius: 3px;
+    display: block;
+    font-family: sans-serif;
+    width: 170px;
+    height: 50px;
+    margin: 10px auto;
+    text-align: right;
+    background: #EEEBB4;
+    color: #fff;
+    font-size: 22px;
+    margin-left: 25px;
+    outline: none;
+    overflow: hidden;
+    letter-spacing: 5px;
+    position: relative;
+    cursor: text;
+}
+
+button {
+    border: 0;
+    color: #fff;
+}
+
+#firstRows {
+    margin-bottom: 20px;
+    position: relative;
+    top: 10px;
+}
+
+.rows {
+    width: 300px;
+    margin-top: 10px;
+}
+
+.btn {
+    width: 50px;
+    height: 50px;
+    margin-left: 5px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+.delete {
+    float: left;
+    background: #FF3327;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    outline: none;
+    margin-left: 25px;
+    border-radius: 3px;
+    margin-right: 10px;
+    box-shadow: 0px 4px #FF2212;
+}
+
+.number {
+    background: #24b4de;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0px 4px #009de4;
+}
+
+.operator {
+    background: #FF6138;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0px 4px #FF521F;
+}
+
+.zero { 
+    background: #24b4de;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0px 4px #009de4;
+}
+
+.decimal {  
+    background: #FFDA00;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0px 4px #FFAA04;
+}
+
+.equal {
+    background: #48BD29;
+    color: #fff;
+    font-size: 26px;
+    cursor: pointer;
+    box-shadow: 0px 4px #30BD00;
+}
+
+.firstItem {
+    margin-left: 25px;
+}
