@@ -15,13 +15,13 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-//Route::get('/insertRestaurant','RestaurantController@insertRestaurant');
-//Route::get('/insertFood','FoodController@insertFood');
-//Route::get('/insertUser','UserController@insertUser');
-//Route::get('/addOrder','OrderController@addOrder');
+Route::get('/insertRestaurant','RestaurantController@insertRestaurant');
+Route::get('/insertFood','FoodController@insertFood');
+Route::get('/insertUser','UserController@insertUser');
+Route::get('/addOrder','OrderController@addOrder');
 //Route::get('/listOrders','OrderController@listOrders');
 Route::post('/insertOrder','OrderController@insertOrder');
-//Route::get('/listRestaurant','RestaurantController@listRestaurant');
-//Route::get('/listFood','FoodController@listFood');
+Route::get('/listRestaurants','RestaurantController@listRestaurants');
+Route::get('/listFoods','FoodController@listFoods');
 //Route::get('/listUser','UserController@listUser');
-//Route::get('/listOrder','OrderController@listOrder');
+Route::get('/listOrders','OrderController@listOrders');

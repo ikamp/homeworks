@@ -20,4 +20,8 @@ class FoodController extends Controller
     {
         return Food::all();
     }
+    public function listFood()
+    {
+        return Food::where("restaurantId",1)->get();
+    }
 }

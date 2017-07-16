@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOrderitemTable extends Migration
+class CreateOrderItemTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateOrderitemTable extends Migration
      */
     public function up()
     {
-        Schema::create('orderitem', function (Blueprint $table) {
+        Schema::create('orderItem', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('foodId');
             $table->integer('orderId');

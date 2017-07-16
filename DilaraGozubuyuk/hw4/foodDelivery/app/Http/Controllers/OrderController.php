@@ -13,20 +13,17 @@ class OrderController extends Controller
         $order = new Order();
         $order->userId = 1;
         $order->save();
-        $orderitem = new OrderItem();
+        $orderItem = new OrderItem();
         var_dump(count($request[4]));
-        $count=0;
-        while(count($request[$count])!=0)
+
+        foreach ($request as $item)
         {
-            var_dump($request[$count]["foodid"]);
-            var_dump($request[$count]["quantity"]);
-            var_dump($request[$count]["price"]);
-            $orderitem->foodId = $request[$count]["foodid"];
-            $orderitem->orderId = $order->id;
-            $orderitem->quantity = $request[$count]["quantity"];
-            $orderitem->price = $request[$count]["price"];
-            $count++;
-            $orderitem->save();
+            var_dump("naber");
+            $orderItem->foodId = $item["foodid"];
+            $orderItem->orderId = $order->id;
+            $orderItem->quantity = $item["quantity"];
+            $orderItem->price = $item["price"];
+            $orderItem->save();
         }
     }
     public function addOrder()
@@ -34,18 +31,16 @@ class OrderController extends Controller
         $order = new Order();
         $order->userId = 1;
         $order->save();
-        $orderitem = new OrderItem();
-        $orderitem->foodId = 2;
-        $orderitem->orderId = $order->id;
-        $orderitem->quantity = 2;
-        $orderitem->price = 10;
-        $orderitem->save();
+        $orderItem = new OrderItem();
+        $orderItem->foodId = 2;
+        $orderItem->orderId = $order->id;
+        $orderItem->quantity = 2;
+        $orderItem->price = 10;
+        $orderItem->save();
     }
     public function listOrders()
     {
-        $Orders=OrderItem::table('orderitem')->select('food.name', 'food.price', 'order.quantity')
-            ->join('food', 'food.id', '=', 'orderitem.foodId')->get();
-        return view ('orders',['orders'=>$Orders]);
+        return OrderItem::where("orderId",1)->get();
     }
 
 }

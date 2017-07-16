@@ -8,4 +8,8 @@ class User extends Model
 {
     public $timestamps = false;
     protected $table = 'user';
+    public function orders()
+    {
+         return $this::hasMany('App\Order', 'userId');
+    }
 }

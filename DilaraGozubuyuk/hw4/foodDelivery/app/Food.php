@@ -8,4 +8,11 @@ class Food extends Model
 {
     public $timestamps = false;
     protected $table = 'food';
+
+    public function restaurant()
+     {
+         return $this::hasOne('App\Restaurant' , 'id');
+     }
+
+
 }
