@@ -7,5 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Order extends Model
 {
     protected $table = 'order';
-    protected $timestamps = false;
+    public $timestamps = false;
+
+    public static function getMyOrders($userid)
+    {
+        OrderItem::where('id','=',$userid)->get();
+    }
+
 }

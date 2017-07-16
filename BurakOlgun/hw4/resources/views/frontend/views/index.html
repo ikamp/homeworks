@@ -1,0 +1,40 @@
+<html ng-app="foodBoxApp">
+<head>
+    <title>foodBoxApp</title>
+    <link href="../assets/css/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body ng-controller="rootController">
+<div class="container-fluid wrapper">
+    <div id="nav-menu" class="container-fluid">
+        <a href="javascript:">
+            <div id="logo-div">
+                <thumbnail ng-click="navFalser('tab1')" file-type="image" source="image.jpg" max-height="40" max-width="150"></thumbnail>
+            </div>
+        </a>
+        <div class="btn-group">
+            <a href="javascript:"  ng-click="navFalser('tab1')" ng-class="{active: tab1}" class="btn btn-info nav-hrefs">Mainpage</a>
+            <a href="javascript:" ng-click="navFalser('tab2')" ng-class="{active: tab2}"  class="btn btn-info nav-hrefs">Restaurants</a>
+            <a href="javascript:" ng-click="navFalser('tab3')" ng-class="{active: tab3}" class="btn btn-info nav-hrefs">AllOrders</a>
+            <a href="javascript:" ng-click="navFalser('tab4')" ng-class="{active: tab4}" class="btn btn-info nav-hrefs">AllUser</a>
+        </div>
+        <h3 id="title-text">FOOD BOX APP!</h3>
+    </div>
+    <food-list ng-show="tab1"></food-list>
+    <basketlist ng-show="tab1"></basketlist>
+    <restaurant-list ng-show="tab2"></restaurant-list>
+</div>
+
+<footer>
+    <script type="text/javascript" src="../assets/js/angular.js"></script>
+    <script type="text/javascript" src="../assets/js/app.js"></script>
+    <script type="text/javascript" src="components/services/dataService.js"></script>
+    <script type="text/javascript" src="components/RootController.js"></script>
+    <script type="text/javascript" src="components/FoodComponents/FoodList/foodList.component.js"></script>
+    <script type="text/javascript" src="components/OrderComponents/OrderList/orderList.component.js"></script>
+    <script type="text/javascript" src="components/BasketComponent/basketList.component.js"></script>
+    <script type="text/javascript" src="components/RestaurantComponents/RestaurantList/restaurantList.component.js"></script>
+    <script src="../assets/bower_components/angular-thumbnails/dist/angular-thumbnails.min.js"></script>
+</footer>
+</body>
+</html>

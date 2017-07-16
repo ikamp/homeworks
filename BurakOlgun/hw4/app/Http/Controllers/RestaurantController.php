@@ -14,42 +14,43 @@ class RestaurantController extends Controller
         try
         {
             $restaurants = Restaurant::all();
+            return response()->json($restaurants);
         } catch (Exception $exception)
         {
-            return response() -> json('Error => ' .$exception -> getMessage());
+            return response()->json('Error => ' .$exception->getMessage());
         }
-        return response() -> json($restaurants);
 
     }
     public function createNewRestaurant(Request $request)
     {
         try
         {
-            if ($request->name == '') throw new Exception("Restaurant name cant be null");
+
+            if ($request->name == '')
+                throw new Exception("Restaurant name cant be null");
             $restaurant = new Restaurant();
             $restaurant->name = $request->name;
             $restaurant->district = $request->district;
             $restaurant->phone = $request->phone;
             $restaurant->save();
+            return response()->json("Restaurant Created");
+
         } catch (Exception $exception) {
             return response()->json("Error =>" . $exception->getMessage());
         }
-        return response()->json("Restaurant Created");
     }
 
     public function getRestaurantFood(Request $request)
     {
         try
         {
-            $restaurantId = $request -> id;
-            if($restaurantId == '' | $restaurantId == null ) throw new Exception('Restorant id can not be null');
-            $foods = Food::where('restaurant_id', '=', $restaurantId)->get();
+            $restaurantId = $request->id;
+            if($restaurantId == '' | $restaurantId == null )
+                throw new Exception('Restorant id can not be null');
+            return response()->json(Food::getRestaurantsFoods($restaurantId));
         } catch (Exception $exception)
         {
-            return response() -> json('Error => '. $exception->getMessage());
+            return response()->json('Error => '. $exception->getMessage());
         }
-        return response() -> json($foods);
     }
-
-
 }
