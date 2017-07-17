@@ -12,6 +12,7 @@ class RestaurantController extends Controller
         $restaurantList = Restaurant::all();
         return response()->json($restaurantList);
     }
+
     public function show($id)
     {
         $restaurant = Restaurant::find($id);

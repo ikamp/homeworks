@@ -3,10 +3,9 @@ angular.module('foodDeliveryApp')
 
 function foodController($scope, $http, DataService) {
     $scope.loading = false;
-
     $scope.getFoods = function () {
         $scope.loading = true;
-        DataService.getFoods(function(response) {
+        DataService.getFoods(function (response) {
             $scope.loading = false;
             $scope.foods = response;
         });

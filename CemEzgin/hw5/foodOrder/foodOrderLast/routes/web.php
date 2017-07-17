@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('index2');
 });
 
-Route::get('restaurant','RestaurantController@index');
-Route::get('restaurant/{id?}','RestaurantController@show');
-Route::get('food/{restaurantId?}','FoodController@index');
-Route::get('order/{id?}','OrderController@index');
+Route::get('restaurant', 'RestaurantController@index');
+Route::get('restaurant/{id?}', 'RestaurantController@show');
+Route::get('food/{restaurantId?}', 'FoodController@index');
+Route::get('order/{id?}', 'OrderController@index');

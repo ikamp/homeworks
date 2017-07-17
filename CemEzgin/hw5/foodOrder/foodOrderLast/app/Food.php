@@ -11,6 +11,6 @@ class Food extends Model
 
     public function restaurant()
     {
-        return $this->hasOne('App\Restaurant' , 'id');
+        return $this->hasOne('App\Restaurant', 'id');
     }
 }

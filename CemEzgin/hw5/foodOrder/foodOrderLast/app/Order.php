@@ -14,11 +14,6 @@ class Order extends Model
         return $this->hasMany('App\OrderItem', 'orderId');
     }
 
- /*   public function user()
-    {
-        return $this->hasOne('App\User', 'id');
-    }*/
-
     public function userOrders()
     {
         return $this->hasMany('App\Order', 'userId');
