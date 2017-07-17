@@ -8,9 +8,9 @@ function dataService($http) {
             $http({
                 method: 'GET',
                 url: 'http://127.0.0.1:8000/restaurants'
-            }).then(function successCallback(response) {
+            }).then(function(response) {
                 callback && callback(response.data);
-            }, function errorCallback(response) {
+            }, function(response) {
                 console.log(response);
             });
         },
@@ -18,9 +18,9 @@ function dataService($http) {
             $http({
                 method: 'GET',
                 url: 'http://127.0.0.1:8000/foods/'+id
-            }).then(function successCallback(response) {
+            }).then(function(response) {
                 callback && callback(response.data);
-            }, function errorCallback(response) {
+            }, function(response) {
                 console.log(response);
             });
         },
@@ -28,9 +28,9 @@ function dataService($http) {
             $http({
                 method: 'GET',
                 url: 'http://127.0.0.1:8000/orders/4'
-            }).then(function successCallback(response) {
+            }).then(function(response) {
                 callback && callback(response.data);
-            }, function errorCallback(response) {
+            }, function(response) {
                 console.log(response);
             });
         },

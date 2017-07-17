@@ -35,17 +35,19 @@
 			</div><!-- /.container-fluid -->
 		</nav>
 		<div class="foods col-xs-8" ng-controller="FoodController">
-
 			<div class="col-xs-12" ng-repeat="food in foods">
 				<div class="row">
 					<div class="col-xs-10">	
 						<img src="http://lorempixel.com/150/150/food/" alt="placeholder" class="img-rounded">
-						<h3><b>{{food.name}}</b></h3>
+						<h3>
+							<b>{{food.name}}</b>
+						</h3>
 						<p>
-							{{food.description}} olan Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-							tempor incididunt ut labore et dolore magna aliqua. 
+							{{food.description}} olan Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
 						</p>
-						<h4><b>{{food.price}} tl</b></h4>
+						<h4>
+							<b>{{food.price}} tl</b>
+						</h4>
 					</div>
 					<div class="col-xs-2">
 						<button type="button" class="btn chart" ng-click="order(food)">
@@ -55,6 +57,7 @@
 				</div>
 			</div>
 		</div>
+
 		<div class="col-xs-4">
 			<chart></chart>	
 		</div>
