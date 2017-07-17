@@ -15,8 +15,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::middleware('cors')->get('/restaurants','RestaurantController@list'); 
 Route::get('/user','UserController@login');
-Route::get('/restaurants','RestaurantController@list');
-Route::get('/foods/{restaurantId}','FoodController@list');
-Route::get('/orders/{userId}','OrderController@list');
-Route::post('/orders/{userId}/create', 'OrderController@create');
+//Route::get('/restaurants','RestaurantController@list');
+Route::middleware('cors')->get('/foods/{restaurantId}','FoodController@list');
+Route::middleware('cors')->get('/orders/{userId}','OrderController@list');
+Route::post('/orders/create', 'OrderController@create');

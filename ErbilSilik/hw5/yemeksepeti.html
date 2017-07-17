@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Food Delivery</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>Food Delivery</h1>
+
+  <div class="row">
+   <div class="col-sm-6"> 
+        <button type="button" class="btn btn-danger btn-lg">Orders</button>
+
+   </div>
+    <div class="col-sm-6"> 
+      <button type="button" class="btn btn-danger btn-lg">Restaurants</button>
+
+
+    </div>
+
+</div>
+  
+</div>
+  
+<div class="container" ng-app="myApp" ng-controller="myCtrl">
+
+
+  <div class="row">
+    <div class="col-xs-4" ng-repeat="restaurant in restaurants">
+      <img src="http://lorempixel.com/400/200/food/{{restaurant.id}}" class="img-rounded" width="200" height="150"> 
+      <h3> <a href="http://127.0.0.1:8000/foods/1"> {{ restaurant.name }} </a>  </h3>
+      <p> {{ restaurant.district }} </p>
+      <p> {{ restaurant.phonenumber }} </p>
+      
+    
+  </div>
+
+   
+</div>
+
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope, $http) {
+  $http.get("http://127.0.0.1:8000/restaurants/")
+  .then(function(response) {
+      console.log(response);  
+      $scope.restaurants = response.data; 
+
+  });
+});
+</script>
+
+
+
+</body>
+</html>
