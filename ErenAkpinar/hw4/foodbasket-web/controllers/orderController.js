@@ -12,6 +12,5 @@ function orderController($scope) {
             price: price,
             quantity: 1
         });
-        console.log($scope.order);
     };
 }
