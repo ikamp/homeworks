@@ -17,13 +17,8 @@
                 <td>{{food.price}}</td>
                 <td>{{food.description}}</td>
                 <td>
-                    <button class="btn btn-success" ng-controller="rootController"
-                        ng-click="goesToRootBasket({
-                            'id': food.id,
-                            'name': food.name,
-                            'price': food.price
-                                                  })">
-                    Add
+                    <button class="btn btn-success" ng-controller="rootController" ng-click="goesToRootBasket(food)">
+                        Add
                     </button>
                 </td>
             </tr>

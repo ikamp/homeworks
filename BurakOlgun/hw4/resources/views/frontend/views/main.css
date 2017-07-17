@@ -1,22 +1,17 @@
-body {
-}
-#nav-menu
-{
+#nav-menu {
     background-color: #5bc0de;
     padding-right: 100px;
-
 }
-#logo-div
-{
+
+#logo-div {
     display: inline;
-
 }
-.nav-hrefs
-{
+
+.nav-hrefs {
     text-align: center;
     padding-left: 40px;
-
 }
+
 canvas {
     display: inline-block;
     margin-top: 10px;
@@ -24,25 +19,25 @@ canvas {
     margin-right: 30px;
     padding-top: 10px;
 }
-#title
-{
-display: inline;
+
+#title {
+    display: inline;
     float: right;
     text-align: center;
     align-items: center;
 }
-#title-text
-{
+
+#title-text {
     color: orangered;
     display: inline;
     float: right;
     padding: 20px;
 }
-.left-content
-{
+
+.left-content {
     float: left;
 }
-.left-table
-{
+
+.left-table {
     margin-top: 15px;
 }

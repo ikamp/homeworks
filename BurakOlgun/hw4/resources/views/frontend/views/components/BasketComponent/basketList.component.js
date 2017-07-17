@@ -30,11 +30,11 @@ angular.module('foodBoxApp')
                     'userId':1,
                     'foodId': args[0].id,
                     'name': args[0].name,
-                    'price': 1
+                    'price': args[0].price,
+                    'quantity': args[0].quantity
                 });
-                console.log(args[0]);
-
             });
+
             $scope.deleteClickedItem = function(index)
             {
                 $scope.ordersOnBasket.splice(index,1);

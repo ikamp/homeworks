@@ -1,4 +1,4 @@
-<div class="col-md-12 text-center" style="float: left">
+<div class="col-md-12 text-center pull-left">
     <div class="container col-md-12 left-content">
         <table class="table left-table">
             <thead class="thead-default">
@@ -27,19 +27,14 @@
 <button class="form-control btn btn-info" ng-click="newRestaurantShower()">Add New Restaurant</button>
 <div class="form-control" ng-show="tab5">
     <label class="col-form-label-sm">Name</label>
-    <input class="form-control" type="text" ng-model="restaurantName"  required>
+    <input class="form-control" type="text" ng-model="name"  required>
     <label class="col-form-label-sm">Disctrict</label>
-    <input class="form-control" type="text" ng-model="restaurantDistrict"  required>
+    <input class="form-control" type="text" ng-model="district"  required>
     <label class="col-form-label-sm">Phone</label>
-    <input class="form-control" type="text" ng-model="restaurantPhone"  required>
+    <input class="form-control" type="text" ng-model="phone"  required>
     <label></label>
-    <div ng-click="newRestaurantDatas.push({
-    'name':restaurantName,
-    'district':restaurantDistrict,
-    'phone':restaurantPhone
-    })"><button class="btn bg-success form-control" ng-disabled="Form.$invalid" ng-click="postNewRestaurant()">Submit</button>
+    <div ng-click="getNewRestaurantDatas(name, district, phone)"><button class="btn bg-success form-control" ng-disabled="Form.$invalid" ng-click="postNewRestaurant()">Submit</button>
     </div>
 </div>
-    <script type="text/javascript" src="/views/components/RootController.js"></script>
 </div>
 </form>

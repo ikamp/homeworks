@@ -5,6 +5,14 @@ angular.module('foodBoxApp')
     });
             function restaurantListController($scope, DataService, $http) {
                 $scope.newRestaurantDatas = [];
+
+                $scope.getNewRestaurantDatas = function (name, district, phone) {
+                    $scope.newRestaurantDatas.push({
+                        'name':name,
+                        'district':district,
+                        'phone':phone
+                    });
+                };
                 var newRestaurantRequest = {
                     method: 'POST',
                     url: 'http://localhost:8000//restaurant/new',
@@ -27,16 +35,10 @@ angular.module('foodBoxApp')
             };
 
             $scope.postNewRestaurant = function () {
-            {
-                $http(newRestaurantRequest).then(function(response){
-                    console.log("new restaurant requested");
-                        console.log($scope.newRestaurantDatas);
-                        console.log(response);
-                    }, function(){
-                        alert("Connection Problem");
+                $http(newRestaurantRequest).then(function(response) {
+                    alert('New Restaurant Added');
+                    }, function() {
+                    alert("Connection Problem");
                     });
                 }
-
-            };
-
-        }
+    }

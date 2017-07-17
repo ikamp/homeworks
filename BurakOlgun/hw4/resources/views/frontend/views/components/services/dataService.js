@@ -2,12 +2,12 @@ angular
     .module('foodBoxApp')
     .factory('DataService', dataService);
 
-function dataService($http) {
-    var alertMessage = "Connection Problem, Please Do Control Your Connection";
-    return {
-               getFoods: getFoods ,
-               getRestaurants: getRestaurants
-           };
+    function dataService($http) {
+        var alertMessage = "Connection Problem, Please Do Control Your Connection";
+        return {
+                   getFoods: getFoods ,
+                   getRestaurants: getRestaurants
+               };
 
     function getFoods (callback) {
         $http({
@@ -30,6 +30,4 @@ function dataService($http) {
             alert(alertMessage, response);
         });
     }
-
-
 }

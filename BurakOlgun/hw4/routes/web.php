@@ -11,3 +11,7 @@ Route::get('/orders', 'OrderController@getOrdersAll');
 Route::get('/orders/myorders', 'OrderController@getMyOrders');
 Route::post('/neworder', 'OrderController@newOrder');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
