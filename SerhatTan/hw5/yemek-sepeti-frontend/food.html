@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html ng-app="foodDeliveryApp">
+<head>
+	<title>Yemek Sepeti</title>
+	<link rel="stylesheet" type="text/css" href="lib/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+	<style type="text/css">
+		/*@todo this style will export to new page*/
+		img {
+			float:left;
+			margin-right: 2%; 
+			margin-bottom: 2%; 
+		}
+		.chart {
+			margin-top: 25%;
+		}
+	</style>
+	<div class="container">
+		<nav class="navbar navbar-default">
+			<div class="container-fluid">
+				<!-- Brand and toggle get grouped for better mobile display -->
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index.html">Brand</a>
+				</div>
+
+				<!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+					<form class="navbar-form navbar-left">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Search">
+						</div>
+					</form>
+					<ul class="nav navbar-nav navbar-right">
+						<a href="index.html"><button type="button" class="btn btn-default btn-lg">Restaurants</button></a>
+						<button type="button" class="btn btn-default btn-lg active">Foods</button>
+					</ul>
+				</div><!-- /.navbar-collapse -->
+			</div><!-- /.container-fluid -->
+		</nav>
+		<div class="foods col-xs-8" ng-controller="FoodController">
+
+			<div class="col-xs-12" ng-repeat="food in foods">
+				<div class="row">
+					<div class="col-xs-10">	
+						<img src="http://lorempixel.com/150/150/food/" alt="placeholder" class="img-rounded">
+						<h3><b>{{food.name}}</b></h3>
+						<p>
+							{{food.description}} olan Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. 
+						</p>
+						<h4><b>{{food.price}} tl</b></h4>
+					</div>
+					<div class="col-xs-2">
+						<button type="button" class="btn chart" ng-click="order(food)">
+							<i class="fa fa-cart-plus fa-3x" aria-hidden="true"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-xs-4">
+			<chart></chart>	
+		</div>
+
+		<script type="text/javascript" src="lib/angular.min.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="services/dataService.js"></script>
+		<script type="text/javascript" src="controllers/restaurantsController.js"></script>
+		<script type="text/javascript" src="controllers/foodsController.js"></script>
+	</body>
+	</html>
