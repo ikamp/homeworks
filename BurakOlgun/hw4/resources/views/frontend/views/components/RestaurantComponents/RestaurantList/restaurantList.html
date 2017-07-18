@@ -27,13 +27,15 @@
 <button class="form-control btn btn-info" ng-click="newRestaurantShower()">Add New Restaurant</button>
 <div class="form-control" ng-show="tab5">
     <label class="col-form-label-sm">Name</label>
-    <input class="form-control" type="text" ng-model="name"  required>
+    <input class="form-control" type="text" ng-model="newRestaurant.name"  required>
     <label class="col-form-label-sm">Disctrict</label>
-    <input class="form-control" type="text" ng-model="district"  required>
+    <input class="form-control" type="text" ng-model="newRestaurant.district"  required>
     <label class="col-form-label-sm">Phone</label>
-    <input class="form-control" type="text" ng-model="phone"  required>
+    <input class="form-control" type="text" ng-model="newRestaurant.phone"  required>
     <label></label>
-    <div ng-click="getNewRestaurantDatas(name, district, phone)"><button class="btn bg-success form-control" ng-disabled="Form.$invalid" ng-click="postNewRestaurant()">Submit</button>
+        <button class="btn bg-success form-control" ng-disabled="Form.$invalid" ng-click="postNewRestaurant(newRestaurant)">
+            Submit
+        </button>
     </div>
 </div>
 </div>

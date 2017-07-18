@@ -4,41 +4,42 @@ angular.module('foodBoxApp')
         controller: restaurantListController
     });
             function restaurantListController($scope, DataService, $http) {
-                $scope.newRestaurantDatas = [];
+                $scope.newRestaurant = [];
 
-                $scope.getNewRestaurantDatas = function (name, district, phone) {
-                    $scope.newRestaurantDatas.push({
-                        'name':name,
-                        'district':district,
-                        'phone':phone
+                $scope.forwardNewRestaurantData = function (name, district, phone) {
+                    $scope.newRestaurant.push({
+                        'name': name,
+                        'district': district,
+                        'phone': phone
                     });
                 };
+
                 var newRestaurantRequest = {
                     method: 'POST',
                     url: 'http://localhost:8000//restaurant/new',
                     headers: {
                         'Content-Type': 'application/json'
                     },
-                    data:$scope.newRestaurantDatas
+                    data: $scope.newRestaurant
                 };
 
-            $scope.getRestaurants = function () {
-                DataService.getRestaurants(function(data) {
-                    $scope.restaurants =  data;
-                    console.log("service2");
-                });};
+                $scope.getRestaurants = function () {
+                    DataService.getRestaurants(function (data) {
+                        $scope.restaurants = data;
+                    });
+                };
 
-            $scope.filler = $scope.getRestaurants();
+                $scope.filler = $scope.getRestaurants();
 
-            $scope.newRestaurantShower = function () {
-                $scope.tab5 = !$scope.tab5;
-            };
+                $scope.newRestaurantShower = function () {
+                    $scope.tab5 = !$scope.tab5;
+                };
 
-            $scope.postNewRestaurant = function () {
-                $http(newRestaurantRequest).then(function(response) {
-                    alert('New Restaurant Added');
-                    }, function() {
-                    alert("Connection Problem");
+                $scope.postNewRestaurant = function () {
+                    $http(newRestaurantRequest).then(function (response) {
+                        alert('New Restaurant Added');
+                    }, function () {
+                        alert("Connection Problem");
                     });
                 }
-    }
+            }

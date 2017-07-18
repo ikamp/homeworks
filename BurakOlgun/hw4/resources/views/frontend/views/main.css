@@ -1,15 +1,18 @@
 #nav-menu {
     background-color: #5bc0de;
     padding-right: 100px;
+
 }
 
 #logo-div {
     display: inline;
+
 }
 
 .nav-hrefs {
     text-align: center;
     padding-left: 40px;
+
 }
 
 canvas {

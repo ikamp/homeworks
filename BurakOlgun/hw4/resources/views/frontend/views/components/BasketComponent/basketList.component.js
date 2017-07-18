@@ -17,15 +17,13 @@ angular.module('foodBoxApp')
             $scope.postTheOrders = function() //this block post the datas
             {
                 $http(newOrderRequest).then(function(response){
-                    console.log("food list posted!");
+                    alert("Your Order is Received");
                 }, function(){
                     alert("Connection Problem");
                 });
             };
 
             $scope.$on('baskedChanged', function(event, args) {
-                console.log(args);
-                console.log(args[0].name);
                 $scope.ordersOnBasket.push({
                     'userId':1,
                     'foodId': args[0].id,
@@ -34,7 +32,6 @@ angular.module('foodBoxApp')
                     'quantity': args[0].quantity
                 });
             });
-
             $scope.deleteClickedItem = function(index)
             {
                 $scope.ordersOnBasket.splice(index,1);
