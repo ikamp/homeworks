@@ -11,9 +11,8 @@ function dataService($http) {
         $http({
             method: 'GET',
             url: 'http://127.0.0.1:8000/restaurant'
-        }).then(function successCallback(response) {
+        }).then(function (response) {
             callback && callback(response.data);
-        }, function errorCallback(response) {
         });
     }
 

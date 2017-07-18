@@ -11,4 +11,4 @@ function restaurantController($scope, $http, DataService) {
     }
 
 }
-restaurantController.$inject = ['$scope', '$http'];
+
