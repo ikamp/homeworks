@@ -1,0 +1,53 @@
+@font-face {
+    font-family: 'Abel', sans-serif;
+    src: url('../fonts/Abel-Regular.ttf');
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+}
+
+a {
+    color: black;
+    font-weight: bold;
+}
+
+#top {
+    height: 200px;
+}
+
+.banner {
+    padding-top: 50px;
+    height: 70px;
+    background-color: #AC000B;
+}
+
+#inner {
+    padding-top: 50px;
+    height: 70px;
+    background-color: white;
+
+}
+
+img {
+    margin-top: -20px;
+    margin-left: 100px;
+    height: 150px;
+    width: 150px;
+}
+
+.link {
+    color: orange;
+}
+
+#PanelHeader{
+    background-color: #AC000B;
+    color: white;
+}
+#panelBasket{
+    background-color: #FACC2E;
+    color:black;
+}
+#carousel{
+    height: 500px;
+}
