@@ -1,3 +1,4 @@
+
 angular
     .module('foodDeliveryApp')
     .component('restaurantList', {
@@ -6,7 +7,10 @@ angular
     });
 
 function RestaurantController() {
-
-    this.restaurants = [];
-
+    this.restaurants = [
+        {
+            name: 'Burger King',
+            district: 'Taksim'
+        }
+    ];
 }

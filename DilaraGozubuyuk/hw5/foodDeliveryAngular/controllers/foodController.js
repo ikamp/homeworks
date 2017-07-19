@@ -2,7 +2,7 @@ angular.module('foodDeliveryApp')
        .controller('FoodController', foodController);
 
 function foodController($scope, $http, DataService) {
-	$scope.title = 'Yemekler';
+	//$scope.title = 'Yemekler';
 	$scope.loading = false;
     $scope.flag = false;
 
@@ -21,5 +21,7 @@ function foodController($scope, $http, DataService) {
             $scope.posts = response;
         });
     }
+
+
 
 }
