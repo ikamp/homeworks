@@ -1,0 +1,17 @@
+<div>
+    <p>This area is Order.bhxjk</p>
+        <p ng-repeat="a in $ctrl.items">
+            <span>{{a.foodName}}</span>
+            <span>{{a.foodPrice}}</span>
+        </p>
+    </div>
+</div>
+<li ng-repeat="item in $ctrl.items " >
+    <span>{{$index+1}}.</span>'
+    <span>{{item.foodName}}</span>'
+    <span ng-click="control=!control"> +</span>
+    <a href="" ng-click="$ctrl.restaurants.splice($index,1)"> -</a>
+    <a href="" ng-click="$ctrl.remove($index)"> sil</a>
+    <p ng-show="control"></p>
+    </li>
+</ul>
