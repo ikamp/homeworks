@@ -1,0 +1,47 @@
+<html lang="en-US" ng-app="restaurantRecords">
+<head>
+    <title>Laravel 5 AngularJS CRUD Example</title>
+
+</head>
+<body>
+<h2>FOOD ORDERING SYSTEM</h2>
+<div ng-controller="RestaurantController">
+    <button ng-click="getPosts()" class="btn btn-primary">Get</button>
+    <!-- Table-to-load-the-data Part -->
+    <table class="table">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>RestaurantName</th>
+            <th>District</th>
+            <th>PhoneNumber</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr ng-repeat="restaurants in restaurant track by $index">
+            <td>{{$index+1}}</td>
+            <td>{{restaurants.name}}</td>
+            <td>{{restaurants.district}}</td>
+            <td>{{restaurants.phoneNumber}}</td>
+            <td>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<!--<script src="../../public/app/lib/angular/angular.min.js"></script>-->
+
+
+<script src="../../public/app/app.js"></script>
+<script src="../../public/app/controller/restaurants.js"></script>
+<script src="../../public/app/dataservice.js"></script>
+<link rel="stylesheet" href="../../public/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-route.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.7/angular-resource.min.js"></script>
+
+
+</body>
+</html>

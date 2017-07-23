@@ -1,24 +1,17 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: yalcin
- * Date: 07.07.2017
- * Time: 06:44
- */
-abstract class Items
+
+ class Items
 {
     protected $id;
-
-
-  protected $itemname;
-  protected $itemprice;
+    protected $itemName;
+    protected $itemPrice;
 
     /**
      * @return mixed
      */
     public function getItemname()
     {
-        return $this->itemname;
+        return $this->itemName;
     }
 
     /**
@@ -26,7 +19,7 @@ abstract class Items
      */
     public function setItemname($itemname)
     {
-        $this->itemname = $itemname;
+        $this->itemName = $itemname;
     }
     /**
      * @return mixed
@@ -49,7 +42,7 @@ abstract class Items
      */
     public function getItemprice()
     {
-        return $this->itemprice;
+        return $this->itemPrice;
     }
 
     /**
@@ -57,7 +50,7 @@ abstract class Items
      */
     public function setItemprice($itemprice)
     {
-        $this->itemprice = $itemprice;
+        $this->itemPrice = $itemprice;
     }
 
     public function AddItemsToBasket()
@@ -65,6 +58,4 @@ abstract class Items
 
 
     }
-
-
 }
