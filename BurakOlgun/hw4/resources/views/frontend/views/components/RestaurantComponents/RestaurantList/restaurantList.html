@@ -1,0 +1,42 @@
+<div class="col-md-12 text-center pull-left">
+    <div class="container col-md-12 left-content">
+        <table class="table left-table">
+            <thead class="thead-default">
+            <tr>
+                <th>#</th>
+                <th>Restaurant Name</th>
+                <th>Price</th>
+                <th>About</th>
+                <th class="bg-danger">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="restaurant in restaurants">
+                <th scope="row">{{$index + 1}}</th>
+                <td>{{restaurant.name}}</td>
+                <td>{{restaurant.phone}}</td>
+                <td>{{restaurant.district}}</td>
+                <td><button class="btn btn-danger">Delete!</button></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<form name="Form">
+<div class="wrapper">
+<button class="form-control btn btn-info" ng-click="newRestaurantShower()">Add New Restaurant</button>
+<div class="form-control" ng-show="tab5">
+    <label class="col-form-label-sm">Name</label>
+    <input class="form-control" type="text" ng-model="newRestaurant.name"  required>
+    <label class="col-form-label-sm">Disctrict</label>
+    <input class="form-control" type="text" ng-model="newRestaurant.district"  required>
+    <label class="col-form-label-sm">Phone</label>
+    <input class="form-control" type="text" ng-model="newRestaurant.phone"  required>
+    <label></label>
+        <button class="btn bg-success form-control" ng-disabled="Form.$invalid" ng-click="postNewRestaurant(newRestaurant)">
+            Submit
+        </button>
+    </div>
+</div>
+</div>
+</form>
