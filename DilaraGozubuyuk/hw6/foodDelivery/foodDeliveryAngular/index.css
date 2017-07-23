@@ -1,0 +1,30 @@
+.navbar {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+footer {
+    background-color: black;
+    padding: 25px;
+    height: 3px;
+}
+
+.restaurant, .order, .orderInfo {
+    height: 180px;
+    border-style: solid;
+    border-color: #6CF;
+    margin: 20px;
+    font-size: 20px;
+    border-radius: 25px;
+    margin-right: 100px;
+}
+
+.jumbotron {
+    background-color: #F5A9A9;
+}
+
+#banner {
+    background-color: #AC000B;
+    color: black;
+}
+

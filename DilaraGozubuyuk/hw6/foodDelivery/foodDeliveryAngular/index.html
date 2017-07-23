@@ -1,0 +1,142 @@
+<html ng-app="foodDeliveryApp">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Yemekhane.com</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+</head>
+<body>
+
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Yemekhane.com</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">Ana Sayfa</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Giriş</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<div class="col-md-12" id="banner">
+    <div class="container text-center">
+        <h1>Yemekhane.com</h1>
+        <p>Aç kalmayın Yemekhane.com'u tıklayın.</p>
+
+    </div>
+
+</div>
+<div class="col-md-12" id="inner" ng-controller="FoodController"></div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12" ng-controller="FoodController">
+            <div class="col-md-4 hidden-xs">
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne"
+                                   aria-expanded="true" aria-controls="collapseOne">
+                                    <p class="link">Dilara Gözübüyük <span class="caret"></span></p>
+                                </a>
+                            </h4>
+
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel"
+                             aria-labelledby="headingOne">
+                            <div class="panel-body">
+                                <a>Bildirimler</a> <br>
+                                <a>Profilim</a> <br>
+                                <a>Siparişler</a> <br>
+                                <a>Favorilerim</a> <br>
+                                <a>Adreslerim</a><br>
+                                <a>Ayarlarım</a><br>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+
+                    <div class="panel-heading" id="PanelHeader">YEMEK SEPETİM</div>
+
+                    <div class="panel-footer" id="panelBasket">Beyoğlu</div>
+                    <div class="panel-body" id="panelBody" ng-controller="GeneralController">
+                        <div ng-repeat="item in items">
+                            {{item.foodName}}
+                            {{item.foodPrice}}
+                        </div>
+                    </div>
+                    <div>
+                        <button ng-click="sendOrder()">Sipariş Ver</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 hidden-xs" ng-init="getPosts()">
+                <div class="panel panel-default" ng-controller="GeneralController">
+                    <div class="panel-heading" id="PanelHeaderRestaurant">Restauranlar</div>
+                    <div class="panel-body">
+                        <div class="panel-group" id="accordionrestauraant" role="tablist" aria-multiselectable="true">
+                            <div class="panel panel-default" ng-repeat="restaurant in restaurants track by $index">
+                                <div class="panel-heading" role="tab" id="headingTwo">
+
+                                    <h4 class="panel-title">
+                                        <a role="button" data-toggle="collapse" data-parent="#accordion"
+                                           href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapseOne">
+                                            <p class="link">{{restaurant.name}} <span class="caret"></span></p>
+                                        </a>
+                                    </h4>
+
+                                </div>
+                                <div id="collapse{{$index}}" class="panel-collapse collapse in" role="tabpanel"
+                                     aria-labelledby="headingOne">
+                                    <div class="panel-body">
+                                        {{restaurant.district}}
+                                        {{restaurant.phoneNumber}}
+
+                                        <br>
+                                        <strong>Yemekler</strong>
+                                        <div ng-repeat="food in restaurant.foods track by $index">
+                                            {{food.name}} Fiyat:{{food.price}} Açıklama {{food.description}}
+                                            <button ng-click="addBasket(food.id, food.name, food.price)">Sepete Ekle
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="container-fluid text-center">
+    <p>2017</p>
+</footer>
+
+<script type="text/javascript" src="lib/jquery.min.js"></script>
+<script type="text/javascript" src="lib/bootstrap.min.js"></script>
+<script type="text/javascript" src="lib/angular.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+<script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="services/dataService.js"></script>
+<script type="text/javascript" src="restaurant/restaurant.component.js"></script>
+<script type="text/javascript" src="order/order.component.js"></script>
+<script type="text/javascript" src="controllers/generalController.js"></script>
+<script type="text/javascript" src="controllers/foodController.js"></script>
+</body>
+</html>

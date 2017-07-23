@@ -1,0 +1,10 @@
+<ul ng-controller="FoodController">
+    <p ng-init="getPosts()">
+    <li ng-repeat="post in posts track by $index">
+        {{$index + 1}}.
+        {{post.name}}
+        {{post.district}}
+        {{post.phoneNumber}}
+    </li>
+    </p>
+</ul>
