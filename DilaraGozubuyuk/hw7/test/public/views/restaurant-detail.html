@@ -1,0 +1,29 @@
+<div class="col-xs-6 pull-left">
+    <div class="panel panel-default">
+        <div class="panel-heading" role="tab" id="headingOne">
+            <h4 class="panel-title">
+                <a target="_self" role="button" data-toggle="collapse" data-parent="#accordion"
+                   href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapseOne">
+                    <h3>{{restaurant.name}}</h3>
+                </a>
+            </h4>
+        </div>
+        <div id="collapse{{$index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <p>{{restaurant.district}}</p>
+                <p> {{restaurant.phoneNumber}}</p>
+                <hr>
+                <h3>Yemekler</h3>
+                <ul class="list-group">
+                    <li ng-repeat="item in restaurant.foods" class="list-group-item">
+                        <input ng-init="item.quantity = 1" type="number" class="col-xs-2" ng-model="item.quantity">
+                        {{item.name}} - {{item.price}} - {{item.id}}
+                        <button class="btn btn-link pull-right" ng-click="addToBasket(item)">
+                            <i class="pull-right glyphicon glyphicon-plus text-success"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
