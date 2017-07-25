@@ -1,0 +1,61 @@
+<div class="col-xs-6 pull-left">
+
+    <div class="panel-group" ng-repeat="restaurant in restaurants track by $index"
+         id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    <a target="_self" role="button" data-toggle="collapse" data-trigger="hover" data-content="fdsfdsfds     " data-parent="#accordion"
+                       href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapseOne">
+
+                    </a>
+                    <div id="angularPopover{{restaurant.id}}" class="popoverText"
+                         data-content="
+                            <button type='button' class='btn btn-success btn-xs'>
+                                {{restaurant.serviceRank}}
+                            </button>
+                            <b> Servis Puani</b><br>
+                            <button type='button' class='btn btn-success btn-xs'>
+                                {{restaurant.tasteRank}}
+                            </button>
+                            <b> Lezzet Puani</b><br>
+                            <button type='button' class='btn btn-success btn-xs'>
+                                {{restaurant.speedRank}}
+                            </button>
+                            <b> Hiz Puani</b>
+                            <br><b>Bolge: </b>{{restaurant.district}}
+                            <br><b>Numara: </b> {{restaurant.phoneNumber}} <br>
+                            <b>Adres: </b> {{restaurant.address}}"
+                         data-trigger="hover" data-title="<b>{{restaurant.name}}</b>"
+                         data-toggle="popover" data-placement="left" data-html="true">
+                        {{restaurant.name}}
+                    </div>
+
+                    <a ng-href="#/restaurant/{{restaurant.id}}">
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </a>
+                </h4>
+
+            </div>
+            <div id="collapse{{$index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+                <div class="panel-body">
+                    <p>{{restaurant.district}}</p>
+                    <p> {{restaurant.phoneNumber}}</p>
+                    <div class="table-bordered pull-right">
+                        <b>TasteRank</b>
+                        <div  class="col-md-4 bg-success text-white pull-right padding:10px">{{restaurant.tasteRank}}</div>
+                    </div>
+                    <div class="table-bordered pull-right">
+                        <b>ServiceRank</b>
+                        <div class="col-md-4 bg-success text-white pull-right">{{restaurant.serviceRank}}</div>
+                    </div>
+                    <div class="table-bordered pull-right">
+                        <b>SpeedRank</b>
+                        <div class="col-md-4 bg-success text-white pull-right">{{restaurant.speedRank}}</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
