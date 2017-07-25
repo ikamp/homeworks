@@ -1,0 +1,19 @@
+<div class="col-xs-6 pull-left">
+    <div class="panel panel-success">
+        <div class="panel-heading">
+            <h3>Siparis Detay</h3>
+        </div>
+        <div id="collapse{{$index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+            <div class="panel-body">
+                <hr>
+                <div class="list-group" ng-repeat="item in orderDetailList.items" class="list-group-item">
+                    <b>{{item.food.name}}</b><br>
+                    <b>Restorant:</b> {{orderDetailList.restaurant.name}}<br>
+                    <b>Siparis id:</b> {{item.order_id}}<br>
+                    <b>Toplam Fiyat:</b> {{item.price}} TL<br>
+                    <b>Siparis Tarih/Saat:</b> {{orderDetailList.created_at}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
