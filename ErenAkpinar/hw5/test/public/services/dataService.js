@@ -53,7 +53,8 @@ function dataService($http) {
     }
 
     function postOrder(order, callback, errorCallback) {
-        $http.post('/api/order', {basket: order})
+        console.log(order);
+        $http.post('/api/order', {foods: order.foods, restaurantId: order.restaurantId})
             .then(function (response) {
                 callback(response.data);
             }, function (error) {

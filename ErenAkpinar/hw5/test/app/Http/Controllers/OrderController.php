@@ -29,16 +29,12 @@ class OrderController extends Controller
     public function store(Request $request)
     {
 
-        $basket = $request->basket;
-        var_dump($basket);
-        die;
-        
         $order = new Order();
         $order->user_id = Auth::id();
-        $order->restaurant_id = $basket->restaurantId;
+        $order->restaurant_id = $request->restaurantId;
         $order->save();
 
-        foreach ($basket->foods as $item) {
+        foreach ($request->foods as $item) {
             $orderItem = new OrderItem();
             $orderItem->food_id = $item["id"];
             $orderItem->price = $item["price"];

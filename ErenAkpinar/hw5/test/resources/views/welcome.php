@@ -26,7 +26,6 @@
 <div class="alert-container" ng-if="notify">
     <div class="alert alert-success alert-dismissable">
         <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
-        {{notify.message}}
         <div ng-bind-html="notify.message"></div>
     </div>
 </div>
@@ -92,7 +91,6 @@
 <script type="text/javascript" src="controllers/restaurant-list.controller.js"></script>
 <script type="text/javascript" src="controllers/order-detail.controller.js"></script>
 <script type="text/javascript" src="controllers/userController.js"></script>
-<script type="text/javascript" src="controllers/orderController.js"></script>
 
 </body>
 </html>
