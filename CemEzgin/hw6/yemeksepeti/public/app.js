@@ -3,7 +3,6 @@ angular
     .module('foodDeliveryApp', ['ngRoute'])
     .config(function ($routeProvider, $locationProvider) {
         $locationProvider.hashPrefix('');
-
         $routeProvider
             .when('/home', {
                 templateUrl: 'views/home.html',
@@ -24,5 +23,4 @@ angular
             .otherwise({
                 redirectTo: '/'
             });
-
     });

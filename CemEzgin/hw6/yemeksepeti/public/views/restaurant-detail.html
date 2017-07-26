@@ -15,7 +15,7 @@
                 <hr>
                 <h3>Yemekler</h3>
                 <ul class="list-group">
-                    <li ng-repeat="item in restaurant.foods" class="list-group-item">
+                    <li ng-repeat="item in restaurant.foods track by $index" class="list-group-item">
                         <input ng-init="item.quantity = 1" type="number" class="col-xs-2" ng-model="item.quantity">
                         {{item.id}}-{{item.name}} - {{item.price}}
                         <button class="btn btn-link pull-right" ng-click="addToBasket(item)">

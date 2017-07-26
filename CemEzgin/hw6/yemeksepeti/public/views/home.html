@@ -1,4 +1,4 @@
-<div class="col-xs-12 col-md-12">
+<div class="col-xs-6 col-md-6">
     <ul class="nav nav-tabs">
         <li class="active"><a data-toggle="tab" href="#home" target="_self">Siparislerim</a></li>
         <li><a data-toggle="tab" href="#menu1" target="_self">Favorilerim</a></li>
@@ -6,21 +6,57 @@
         <li><a data-toggle="tab" href="#menu3" target="_self">VALE</a></li>
     </ul>
     <div class="tab-content">
-        <div id="home" class="tab-pane fade in active">
-            <h3>HOME</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-        </div>
-        <div id="menu1" class="tab-pane fade">
-            <h3>Menu 1</h3>
-            <p>Ut enim ad minim veniam, qo laborquip ex ea commodo consequat.</p>
-        </div>
-        <div id="menu2" class="tab-pane fade">
-            <h3>Menu 2</h3>
-            <p>Sed ut perspiciantium doloremque laudantium, totam rem aperiam.</p>
-        </div>
-        <div id="menu3" class="tab-pane fade">
-            <h3>Menu 3</h3>
-            <p>Eaque ipsa quae vitae dicta sunt explicabo.</p>
+        <div id="home" ng-repeat="item in oldOrderList track by $index" class="tab-pane fade in active">
+            <div class="panel-group">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <div data-toggle="collapse" href="#collapse{{$index}}" target="_self">
+                                <div ng-repeat="order in item.items ">
+                                    {{item.restaurant.name}}, {{order.food.name}} ,{{item.created_at}}
+                                </div>
+                            </div>
+                        </h4>
+                    </div>
+                </div>
+                <div id="collapse{{$index}}" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div ng-repeat="order in item.items ">
+                            <b>Price: </b>{{order.price}}<br>
+                            <b>Quantity: </b>{{order.quantity}}<br><br>
+                        </div>
+                        <button type='button' class='btn btn-success btn-xs'>
+                            {{item.restaurant.serviceRank}}
+                        </button>
+                        <b> Servis Puani</b><br>
+                        <button type='button' class='btn btn-success btn-xs'>
+                            {{item.restaurant.tasteRank}}
+                        </button>
+                        <b> Lezzet Puani</b><br>
+                        <button type='button' class='btn btn-success btn-xs'>
+                            {{item.restaurant.speedRank}}
+                        </button>
+                        <b> Hiz Puani</b>
+                        <br><b>Bolge: </b>{{item.restaurant.district}}
+                        <br><b>Numara: </b> {{item.restaurant.phoneNumber}} <br>
+                        <b>Adres: </b> {{item.restaurant.address}}<br>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+    <div id="menu1" class="tab-pane fade">
+        <h3>Menu 1</h3>
+        <p>Ut enim ad minim veniam, qo laborquip ex ea commodo consequat.</p>
+    </div>
+    <div id="menu2" class="tab-pane fade">
+        <h3>Menu 2</h3>
+        <p>Sed ut perspiciantium doloremque laudantium, totam rem aperiam.</p>
+    </div>
+    <div id="menu3" class="tab-pane fade">
+        <h3>Menu 3</h3>
+        <p>Eaque ipsa quae vitae dicta sunt explicabo.</p>
+    </div>
 </div>
+</div>
+

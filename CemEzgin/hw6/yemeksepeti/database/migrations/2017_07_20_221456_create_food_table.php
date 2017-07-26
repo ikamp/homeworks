@@ -18,6 +18,7 @@ class CreateFoodTable extends Migration
             $table->integer("restaurant_id")->unsigned();
             $table->string("name");
             $table->double("price");
+
             $table->foreign("restaurant_id")->references("id")->on("restaurant");
         });
     }

@@ -7,8 +7,9 @@ function dataService($http) {
         getFoods: getFoods,
         getOrders: getOrders,
         postOrder: postOrder,
-        getOrderDetail: getOrderDetail
-    };
+        getOrderDetail: getOrderDetail,
+        getOldOrders: getOldOrders
+    }
 
     function getRestaurantList(callback, errorCallback) {
         $http({
@@ -33,6 +34,18 @@ function dataService($http) {
     }
 
     function getOrders(callback, errorCallback) {
+        $http({
+            method: 'GET',
+            url: '/api/order'
+        }).then(
+            function (response) {
+                callback && callback(response.data);
+            }, function (response) {
+                errorCallback && errorCallback(response)
+            });
+    }
+
+    function getOldOrders(callback, errorCallback) {
         $http({
             method: 'GET',
             url: '/api/order'

@@ -3,11 +3,11 @@ angular.module('foodDeliveryApp')
 
 function userController($scope, $interval, $rootScope, DataService, $location) {
     var clearInterval;
-    $rootScope.basket = [];
     $scope.person = {
         firstName: 'Cem',
         lastName: 'Ezgin'
     };
+    $scope.basket = [];
 
     $scope.postOrder = function (order) {
         $scope.counter = 5;
@@ -29,8 +29,28 @@ function userController($scope, $interval, $rootScope, DataService, $location) {
             alert(error)
         })
     };
+    $scope.$on('basket-updated', function (e, param) {
+        var foodItem = param.item;
 
+        if (!$scope.basket || !$scope.basket.length) {
+            $scope.basket = [];
+        }
+
+        if ($scope.basket.length > 0) {
+            var copyBasket = angular.copy($scope.basket);
+            angular.forEach(copyBasket, function (key, value) {
+                if (key.id == foodItem.id) {
+                    key.quantity += foodItem.quantity;
+                } else {
+                    copyBasket.push(foodItem);
+                }
+            });
+            $scope.basket = copyBasket;
+        } else {
+            $scope.basket.push(foodItem);
+        }
+    });
     $scope.emptyBasket = function () {
-        $rootScope.basket = [];
+        $scope.basket = [];
     }
 }

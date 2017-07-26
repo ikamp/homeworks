@@ -16,7 +16,7 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $orderHistory = Order::with(["items","items.food"])->where("user_id", Auth::id())->get();
+        $orderHistory = Order::with(["items","items.food","restaurant"])->where("user_id", Auth::id())->get();
         return response()->json($orderHistory);
     }
 
@@ -28,10 +28,10 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $order = new Order();
-        $order->user_id = Auth::id();
-        $order->restaurant_id = $request["restaurantId"];
-        $order->save();
+            $order = new Order();
+            $order->user_id = Auth::id();
+            $order->restaurant_id = $request["restaurantId"];
+            $order->save();
 
         foreach ($request->items as $item) {
             $orderItem = new OrderItem();
@@ -41,6 +41,7 @@ class OrderController extends Controller
             $orderItem->order_id = $order->id;
             $orderItem->save();
         }
+
         return response()->json($order);
     }
 

@@ -3,5 +3,9 @@ angular.module('foodDeliveryApp')
 
 function homeController($scope, DataService) {
     $scope.tab = 'home';
-    DataService.getOrders();
+    $scope.oldOrderList = [];
+    DataService.getOldOrders(function (response) {
+        $scope.oldOrderList = response;
+        console.log(response);
+    });
 }

@@ -1,13 +1,14 @@
 foodDeliveryApp = angular.module('foodDeliveryApp');
 foodDeliveryApp.controller('RestaurantListController', restaurantListController);
 
-function restaurantListController($scope, DataService, $rootScope, $location) {
+function restaurantListController($scope, DataService, $location) {
 
     $scope.getFoods = function (foodId) {
         $scope.loading = true;
         DataService.getFoods(foodId, function (response) {
             $scope.loading = false;
             $scope.foods = response;
+            console.log(response);
         }, function (error) {
             $scope.loading = false;
         });
@@ -15,16 +16,7 @@ function restaurantListController($scope, DataService, $rootScope, $location) {
 
     $scope.go = function () {
         $location.href = '/#/restaurant/4';
-    };
-
-    $scope.addToBasket = function (foodItem) {
-        if (!$rootScope.basket || !$rootScope.basket.length) {
-            $rootScope.basket = [];
-        }
-        if (!foodItem.quantity) {
-            foodItem.quantity = 1;
-        }
-        $rootScope.basket.push(foodItem);
+        console.log($location.href);
     };
 
     DataService.getRestaurantList(function (list) {

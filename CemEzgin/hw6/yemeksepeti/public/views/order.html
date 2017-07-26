@@ -7,10 +7,10 @@
             <div class="panel-body">
                 <hr>
                 <div class="list-group" ng-repeat="item in orderDetailList.items" class="list-group-item">
-                    <b>{{item.food.name}}</b><br>
+                    - <b>{{item.food.name}}</b><br>
                     <b>Restorant:</b> {{orderDetailList.restaurant.name}}<br>
                     <b>Siparis id:</b> {{item.order_id}}<br>
-                    <b>Toplam Fiyat:</b> {{item.price}} TL<br>
+                    <b>Fiyat:</b> {{item.price}} TL<br>
                     <b>Siparis Tarih/Saat:</b> {{orderDetailList.created_at}}
                 </div>
             </div>

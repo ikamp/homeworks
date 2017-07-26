@@ -21,6 +21,7 @@ class CreateOrderItemTable extends Migration
             $table->integer('food_id');
             $table->foreign("order_id")->references("id")->on("order");
             $table->foreign("food_id")->references("id")->on("food");
+
         });
     }
 

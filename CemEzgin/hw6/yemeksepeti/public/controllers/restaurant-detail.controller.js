@@ -11,12 +11,6 @@ function restaurantDetailController($scope, $routeParams, DataService, $rootScop
     });
 
     $scope.addToBasket = function (foodItem) {
-        if (!$rootScope.basket || !$rootScope.basket.length) {
-            $rootScope.basket = [];
-        }
-        if (!foodItem.quantity) {
-            foodItem.quantity = 1;
-        }
-        $rootScope.basket.push(foodItem);
+        $rootScope.$broadcast('basket-updated', {item: foodItem});
     }
 }
