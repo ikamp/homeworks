@@ -1,0 +1,19 @@
+<input type="text" class="form-control" ng-model="$ctrl.search" placeholder="Ara...">
+<ul>
+	<li ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search">
+		<p>
+			<span>{{$index + 1}}.{{restaurant.name}}</span>
+			<span class="btn-link" ng-click="$ctrl.removeItem($index)">Sil</span>
+
+		</p> 
+		<span>{{restaurant.snippet}}</p>
+	</li>
+</ul>
+<div class="form-group col-xs-6">
+	<input type="text" class="form-control" ng-model="$ctrl.newItem" placeholder="Yeni restoran adı">
+</div>
+<a href="" class="btn btn-success btn-sm" 
+		ng-click="$ctrl.restaurants.push({name: $ctrl.newItem, snippet: 'New one'})">Yeni Ekle
+</a>
+
+	

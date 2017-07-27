@@ -1,0 +1,18 @@
+YSFP
+scope:yemeksepeti üzerinden belirli restorantlarda belirli  tarih saatte ve sayýda kampanya oluþturulmasý.
+Kullanýcýnýn paket servis dýþýnda gel al sipariþ tarzýna yönlendirmek için ve 
+yemeksepetinin sadece paket servis deðil servisi olmayan cafe vb.lerdede etkili olmasý saðlanabilir.
+Kullaným artýþýndan sonra ayrý app olarak çýkarýlabilir.
+testsetup: Yemeksepeti üzerindeki sipariþ verildiðinde çýkan kullanýþsýz ödül sistemi bu uygulamaya devredilerek test edilebilir. 
+	bu sayede aktif kullanýcýlara bu kampanyalar bir ödül gibi verilerek uygulama insanlarýn ulaþmak istediði bir konuma getirilebilir.
+çýktý:
+Kampanya sayýsý nasýl arttýrýlabilir ?
+Bu özellik yemeksepetinden baðýmsýz bir uygulama haline nasýl getirilebilir?
+	
+Evet:
+Öncelikle populer olmayan,populerliðin artýþ durumuna göre kampanya geniþletilerek daha yaygýn kullanýlan cafe restorantlarla da populerliðin
+daha artacaðýný gösteren verilerle kampanya alýnýp kampanya sayýsý arttýrýlabilir.
+-Kampanya ve kullaným sayýlarý arttýktan sonra ayrý bir app olarak duyurulabilir.
+
+Hayýr:
+özellik mevcut sistemden kadldýrýlýr.

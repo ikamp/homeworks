@@ -1,0 +1,6 @@
+$ git reflog head in ref log tutuyor
+$ git stash degisiklikleri bi stash e koyuyor.
+$ git clean gereksiz dosyalarý siliyor
+$ git grep git in takibindeki dosyalarý arama
+$ git blame enson deðiþikliði yapanýn bilgisini taþýr
+$ git bisect reponun geçmiþini binary tree ye çevirir.
