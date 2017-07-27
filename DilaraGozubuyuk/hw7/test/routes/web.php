@@ -18,6 +18,8 @@ Route::get('/', function () {
 $apiRoute = "/api/";
 
 Route::resource("$apiRoute/restaurant", 'RestaurantController');
+Route::resource("$apiRoute/user", 'UserController');
+
 
 Route::group(['middleware' => 'auth'], function() use($apiRoute) {
     Route::resource("$apiRoute/order", 'OrderController');

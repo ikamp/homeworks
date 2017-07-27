@@ -19,8 +19,6 @@ class OrderController extends Controller
     {
         $orderHistory = Order::with(["items", "items.food", "restaurant"])->where("user_id", Auth::id())->get();
         // var_dump(response()->json($orderHistory[0]));
-
-
         //$orderHistory = OrderItem::with("food")->where("foodId", 1)->get();
         return response()->json(($orderHistory));
         // return response()->json(OrderItem::all());

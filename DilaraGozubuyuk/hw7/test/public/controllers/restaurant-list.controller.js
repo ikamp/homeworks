@@ -22,26 +22,6 @@ function restaurantListController($scope, DataService, $rootScope, $location) {
         console.log($location.href);
     };
 
-    $scope.addToBasket = function (foodItem) {
-        if (!$rootScope.basket.foods || !$rootScope.basket.foods.length) {
-            $rootScope.basket.foods = [];
-        }
-        if (!foodItem.quantity) {
-            foodItem.quantity = 1;
-        }
-        else {
-            for (var i = 0; i < $rootScope.basket.foods.length; i++) {
-
-                if ($rootScope.basket.foods[i].id === foodItem.id) {
-                    console.log($rootScope.basket.foods[i].quantity);
-                    $rootScope.basket.foods[i].quantity = $rootScope.basket.foods[i].quantity + 1;
-                    console.log($rootScope.basket.foods[i].quantity);
-                    return true;
-                }
-            }
-            $rootScope.basket.foods.push(foodItem);
-        }
-    };
 
     DataService.getRestaurantList(function (list) {
         $scope.restaurantList = list;

@@ -3,6 +3,8 @@ body {
 }
 body a {
 	font-family: 'Ubuntu-Light-Italic', sans-serif;
+	color: darkorange;
+
 }
 body .panel-body {
 	font-family: 'Ubuntu-Regular', sans-serif;
@@ -23,6 +25,11 @@ body .panel-body {
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
 }
+#headBasket
+{
+	background: orange;
+	border-color: orange;
+}
 #alert-container
 {
 	position: absolute;
@@ -32,5 +39,8 @@ body .panel-body {
 input.search {
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
+}
+#login{
+	color: red;
 }
 

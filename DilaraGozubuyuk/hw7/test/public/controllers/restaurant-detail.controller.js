@@ -6,9 +6,10 @@ function restaurantDetailController($scope, $routeParams, DataService, $rootScop
 
 
     $scope.id = $routeParams.id;
-
-    $rootScope.basket.restaurantId = $scope.id;
-    $rootScope.basket.foods = [];
+    $rootScope.basket = {
+        restaurantId: $scope.id,
+        foods: []
+    };
 
     DataService.getFoods($scope.id, function (response) {
         $scope.restaurant = response;
@@ -21,8 +22,21 @@ function restaurantDetailController($scope, $routeParams, DataService, $rootScop
         if (!foodItem.quantity) {
             foodItem.quantity = 1;
         }
-        $rootScope.basket.foods.push(foodItem);
-        console.log($rootScope.basket);
-    }
+        else {
+            var copyBasket = angular.copy($rootScope.basket);
+            for (var i = 0; i < copyBasket.foods.length; i++) {
+                if (copyBasket.foods[i].id === foodItem.id) {
+                    console.log(copyBasket.foods[i].quantity);
+                    copyBasket.foods[i].quantity += foodItem.quantity;
+                    console.log(copyBasket.foods[i].quantity);
+                    $rootScope.basket = angular.copy(copyBasket);
+                    return true;
+                }
+            }
+            $rootScope.basket = angular.copy(copyBasket);
+            $rootScope.basket.foods.push(foodItem);
+            console.log($rootScope.basket.foods);
+        }
+    };
 
 }

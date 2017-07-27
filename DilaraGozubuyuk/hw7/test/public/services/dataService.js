@@ -9,10 +9,20 @@ function dataService($http) {
         getFoods: getFoods,
         getOrders: getOrders,
         getRestaurantList: getRestaurantList,
-        getOrderDetails: getOrderDetails
+        getOrderDetails: getOrderDetails,
+        getUser: getUser
 
+    };
+
+    function getUser(callback) {
+        $http({
+            method: 'GET',
+            url: '/api/user'
+        }).then(
+            function (response) {
+                callback && callback(response.data);
+            });
     }
-
 
     function getOrders(callback) {
         $http({
