@@ -3,6 +3,4 @@ angular.module('foodDeliveryApp')
 
 function homeController($scope, DataService) {
 	$scope.tab = 'home';
-
-    DataService.getOrders();
 }

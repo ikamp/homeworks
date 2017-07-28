@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Order;
 use App\OrderItem;
-use App\Restaurant;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -17,22 +16,10 @@ class OrderController extends Controller
      */
     public function index()
     {
-        $numbers = $this->testFunction();
         $orderHistory = Order::with(["items", "items.food", "restaurant"])->where("user_id", Auth::id())->get();
         return response()->json($orderHistory);
     }
 
-    public function testFunction()
-    {
-        $array = [1, 4, 7, 8, 10];
-
-        $resultArray = [];
-        foreach ($array as $item) {
-            $resultArray[] = $item * 7;
-        }
-
-        return $resultArray;
-    }
     /**
      * Store a newly created resource in storage.
      *

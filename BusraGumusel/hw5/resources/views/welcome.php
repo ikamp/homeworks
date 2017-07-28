@@ -17,7 +17,7 @@
 </div>
 <div class="header">
     <div class="row">
-        <a href="/" class="logo">
+        <a href="#/restaurant-list" class="logo">
             <img src="images/logo.png" >
         </a>
         <div class="col-xs-4 col-xs-offset-4">
@@ -41,9 +41,7 @@
                     </a>
                 </h4>
             </div>
-            <div id="collapseUser" class="panel-collapse co
-
-            llapse" role="tabpanel" aria-labelledby="headUser">
+            <div id="collapseUser" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headUser">
                 <div class="panel-body">
                     <a href="#/orders" ng-click="getOrders()">Siparişlerim</a>
                 </div>
@@ -91,6 +89,9 @@
 <script type="text/javascript" src="controllers/restaurant-list.controller.js"></script>
 <script type="text/javascript" src="controllers/userController.js"></script>
 <script type="text/javascript" src="controllers/orderController.js"></script>
+<script type="text/javascript" src="directives/panel.directive.js"></script>
+<script type="text/javascript" src="directives/user-orders.directive.js"></script>
+
 
 </body>
 </html>

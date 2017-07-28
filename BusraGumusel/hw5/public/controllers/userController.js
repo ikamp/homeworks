@@ -17,15 +17,12 @@ function userController($scope, $timeout, $rootScope, DataService, $location) {
             };
             $timeout(function () {
                 $rootScope.notify = false;
-                $scope.$apply(function() {
-                    $location.path ('/order/' + response.id);
-                });
+                $location.path ('/order/' + response.id);
             },5000)
         },function (error) {
             alert(error)
         })
     };
-
     var timer=function () {
         if ($scope.time>1) {
             $scope.time-=1;
