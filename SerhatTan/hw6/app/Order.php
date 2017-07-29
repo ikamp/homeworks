@@ -12,4 +12,8 @@ class Order extends Model
     {
         return $this->hasMany('App\OrderItem', 'order_id');
     }
+    public function restaurant()
+    {
+        return $this->hasOne('App\Restaurant', 'id','restaurant_id');
+    }
 }

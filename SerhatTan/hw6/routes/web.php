@@ -17,12 +17,13 @@ Route::get('/', function () {
 
 $apiRoute = "/api/";
 
-Route::resource("$apiRoute/restaurant", 'RestaurantController');
 
 Route::group(['middleware' => 'auth'], function() use($apiRoute) {
+    Route::resource("$apiRoute/restaurant", 'RestaurantController');
     Route::resource("$apiRoute/order", 'OrderController');
 });
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/logout', 'HomeController@logout');
+Route::get('/user', 'HomeController@user');

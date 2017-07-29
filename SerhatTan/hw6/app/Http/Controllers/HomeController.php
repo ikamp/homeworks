@@ -31,4 +31,13 @@ class HomeController extends Controller
     {
         return Auth::logout();
     }
+
+    public function user()
+    {
+        if (Auth::check()) {
+            return response()->json(Auth::user());
+        } else {
+            return response()->json(false);
+        }
+    }
 }

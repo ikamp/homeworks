@@ -1,37 +1,3 @@
 <div class="col-xs-6 pull-left">
-    <div class="panel-group" ng-repeat="restaurant in restaurantList  | filter: search track by $index "
-         id="accordion" role="tablist" aria-multiselectable="true">
-        <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingOne">
-                <h4 class="panel-title">
-                    <a target="_self" role="button" data-toggle="collapse" data-parent="#accordion"
-                       href="#collapse{{$index}}" aria-expanded="true" aria-controls="collapseOne">
-                        <a id="aPopover{{restaurant.id}}" class="popoverText" title="{{restaurant.name}}"
-                           data-content="
-                           <button type='button' class='btn btn-success btn-xs'>{{restaurant.serviceRank}}</button>
-                                <b> Service Rate</b><br>
-                           <button type='button' class='btn btn-success btn-xs'>{{restaurant.tasteRank}}</button>
-                                <b> Taste Rate</b><br>
-                           <button type='button' class='btn btn-success btn-xs'>{{restaurant.speedRank}}</button>
-                                <b> Speed Rate</b>
-                           <br><b>District: </b>{{restaurant.district}}
-                           <br><b>Number: </b> {{restaurant.phoneNumber}} <br>
-                           <b>Address: </b> {{restaurant.address}}" data-trigger="hover"
-                           data-toggle="popover" data-placement="top" data-html="true">
-                            {{restaurant.name}}
-                        </a>
-                    </a>
-                    <a ng-href="#/restaurant/{{restaurant.id}}">
-                        <i class="glyphicon glyphicon-chevron-right"></i>
-                    </a>
-                </h4>
-            </div>
-            <div id="collapse{{$index}}" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                <div class="panel-body">
-                    <p>{{restaurant.district}}</p>
-                    <p> {{restaurant.phoneNumber}}</p>
-                </div>
-            </div>
-        </div>
-    </div>
+    <panel list="restaurantList"></panel>
 </div>

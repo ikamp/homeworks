@@ -48,7 +48,7 @@
                 </div>
                 <div id="collapseUser" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headUser">
                     <div class="panel-body">
-                        <a href="" ng-click="getOrders()">Siparişlerim</a>
+                        <a href="#/orders" ng-click="getOrders()">Siparişlerim</a>
                     </div>
                 </div>
             </div>
@@ -67,12 +67,12 @@
                         <h5 ng-if="!basket.length">Sepetiniz henüz boş</h5>
                         <div ng-if="basket.length > 0">
                             <ul>
-                                <li ng-repeat="item in basket">
+                                <li ng-repeat="item in basket track by $index">
                                     <h4>{{item.name}} x {{item.quantity}}</h4>
                                     <h4>Fiyat: {{item.price}}</h4>
                                 </li>
                             </ul>
-                            <button class="btn btn-primary btn-block btn-sm" ng-click="postOrder(basket)">
+                            <button class="btn btn-primary btn-block btn-sm" ng-disabled="isDisabled" ng-click="postOrder(basket)">
                                 Sipariş Ver
                             </button>
                         </div>
@@ -91,13 +91,16 @@
 <script type="text/javascript" src="lib/jquery.min.js"></script>
 <script type="text/javascript" src="lib/bootstrap.min.js"></script>
 <script type="text/javascript" src="app.js"></script>
+<script type="text/javascript" src="services/httpInterceptor.js"></script>
 <script type="text/javascript" src="services/dataService.js"></script>
 <script type="text/javascript" src="restaurant/restaurant.component.js"></script>
 <script type="text/javascript" src="controllers/homeController.js"></script>
 <script type="text/javascript" src="controllers/userController.js"></script>
+<script type="text/javascript" src="controllers/userOrderController.js"></script>
 <script type="text/javascript" src="controllers/restaurant-list.controller.js"></script>
 <script type="text/javascript" src="controllers/restaurant-detail.controller.js"></script>
 <script type="text/javascript" src="controllers/orderController.js"></script>
+<script type="text/javascript" src="directives/panel.directive.js"></script>
 
 </body>
 </html>

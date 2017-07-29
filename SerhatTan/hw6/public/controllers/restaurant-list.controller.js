@@ -33,11 +33,11 @@ function restaurantListController($scope, $rootScope, $location, DataService) {
         $rootScope.basket.push(foodItem);
     };
 
-    DataService.getRestaurantList(function (list){
+    DataService.getRestaurantList(function (list) {
         $scope.restaurantList = list;
-        $(document).ready(function () {
+        $ (document).ready(function () {
             for (i = 0; i < $scope.restaurantList.length; i++) {
-                $('#aPopover'+i).popover();
+                $('#restaurantPopover' + i).popover();
             }
         });
     });

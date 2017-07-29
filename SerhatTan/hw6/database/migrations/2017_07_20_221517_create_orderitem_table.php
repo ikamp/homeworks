@@ -16,10 +16,12 @@ class CreateOrderItemTable extends Migration
         Schema::create('orderitem', function (Blueprint $table) {
             $table->increments('id');
             $table->integer("order_id")->unsigned();
+            $table->integer("food_id");
             $table->double("price");
             $table->integer("quantity");
 
             $table->foreign("order_id")->references("id")->on("order");
+            $table->foreign("food_id")->references("id")->on("food");
 
         });
     }

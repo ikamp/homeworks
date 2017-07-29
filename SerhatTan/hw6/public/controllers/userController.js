@@ -2,6 +2,7 @@ angular.module('foodDeliveryApp')
     .controller('UserController', userController);
 
 function userController($scope, $location, $rootScope, $timeout, DataService) {
+
     $scope.person = {
         firstName: 'Serhat',
         lastName: 'Tan'
@@ -13,7 +14,8 @@ function userController($scope, $location, $rootScope, $timeout, DataService) {
     };
 
     $scope.postOrder = function (order) {
-        DataService.postOrder(order, function (response) {
+        $scope.isDisabled = true;
+        DataService.postOrder(order, $rootScope.restaurantId, function (response) {
             $rootScope.notify = {
                 message: "Siparişiniz başarıyla onaylandı. Yemek Poşeti'ni kullandığınız için teşekkür ederiz."
             };

@@ -1,9 +1,9 @@
 // Define the `foodDelivery` module
 angular
 	.module('foodDeliveryApp', ['ngRoute', 'ngSanitize'])
-        .config(function ($routeProvider, $locationProvider) {
+        .config(function ($routeProvider, $locationProvider, $httpProvider) {
+            $httpProvider.interceptors.push('MyHttpInterceptor');
             $locationProvider.hashPrefix('');
-
             $routeProvider
                 .when('/home', {
                     templateUrl: 'views/home.html',
@@ -20,6 +20,10 @@ angular
                 .when('/order/:id', {
                     templateUrl: 'views/order.html',
                     controller: 'orderController'
+                })
+                .when('/orders', {
+                    templateUrl: 'views/user-orders.html',
+                    controller: 'UserOrderController'
                 })
                 .otherwise({
                     redirectTo: '/'
