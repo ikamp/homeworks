@@ -1,0 +1,16 @@
+{
+  "name": "erenSass",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Sass and gulp example",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-csso": "^3.0.0",
+    "gulp-html": "^0.4.7",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-install": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}
