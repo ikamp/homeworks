@@ -1,0 +1,32 @@
+--------------------
+******LARAVEL******
+--------------------
+config->conf
+routing->routing
+resources->views
+tests->unit&future tests
+vendor -> docs are moved to her
+env ->password etc.
+
+--app->
+console->-php artisan commands
+	->-commands
+	->-exceptions->our exceptions
+	->-HTTP ->controller
+	->-providers-> services,authentication
+
+Blade template
+**************
+laravel template engine for who does not know php. With an easy syntax 
+design can easily add to project.
+https://laravel.com/docs/5.4/blade
+
+eloquent
+**************
+blocks the bad sql writing & it gives chance for easily transfer from 
+mysql to postgresql etc.
+orderby  -> laravel doc.(bak)
+whereRow -> subquery
+ORM
+*********
+Object Relational Mapping

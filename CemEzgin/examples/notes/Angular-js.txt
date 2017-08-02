@@ -1,0 +1,15 @@
+Single Page Application (SPA)
+Inside of angular.js you can use a lite version of jquery with "jqLite"
+
+The best problem is the frontend is the late page loading when the page open.
+With the angular we can split the pages ýnto small pieces and we can combine it in a page.
+without View its not usefull. - Test writings writes with angular.js
+
+For every module we need a scope and we are combining this scopes in a root scope.
+
+
+
+	response	getpost		getpost
+Server  ------> Service <----- controller <------- template
+	<------
+	get,post

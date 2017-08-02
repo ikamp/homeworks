@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  font-size: 16px; }
+
+.container {
+  width: 800px;
+  background: #fffddd;
+  margin: 0 auto;
+  position: relative;
+  font-family: 'Oswald', sans-serif; }
+  .container .header {
+    background: yellow;
+    height: 100px;
+    padding-top: 40px;
+    font-size: 20px; }
+    .container .header ul li {
+      display: inline-block;
+      padding-left: 20px; }
+      .container .header ul li a {
+        color: orangered; }
+  .container .bottom-content {
+    text-align: center; }
+    .container .bottom-content .box {
+      display: inline-block;
+      width: 100px;
+      height: 100px;
+      background: yellow; }
+    .container .bottom-content .image {
+      display: block;
+      padding-top: 50px; }
+    .container .bottom-content .footer {
+      clear: both; }
+
+/*# sourceMappingURL=index.css.map */
