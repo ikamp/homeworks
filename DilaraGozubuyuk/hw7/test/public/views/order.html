@@ -1,0 +1,21 @@
+<div class="col-xs-6 pull-left">
+    <div class="panel-group"
+         id="accordion" role="tablist" aria-multiselectable="true">
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+                <h4 class="panel-title">
+                    {{ orderDetails.restaurant.name}}
+                </h4>
+            </div>
+            <div id="collapse{{$index}}" class="panel-collapse collapse in" role="tabpanel"
+                 aria-labelledby="headingOne" ng-repeat="item in orderDetails.items ">
+                <div class="panel-body">
+                    <div>
+                        <p>Yemek: {{item.food.name}} Adet: {{item.quantity}} Fiyat:{{item.price}}
+                            DURUM:Hazırlanıyor. </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
