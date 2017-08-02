@@ -1,0 +1,5 @@
+<h1>{{title}}</h1>
+<p>{{order.created_at}}</p>
+<div ng-repeat="item in order.items track by $index">
+   {{$index + 1}} - {{item.food.name}} - {{item.quantity}} adet
+</div>

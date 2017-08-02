@@ -1,0 +1,64 @@
+body {
+  background-image: url("http://cdn.wallpapersafari.com/53/39/KVSxPb.jpg");
+  background-size: cover;
+  color: white;
+}
+
+a {
+  color: white !important;
+}
+
+.btn {
+  border-radius: 300px;
+  color: #fff;
+  border: 1px solid;
+  letter-spacing: 2px;
+}
+
+hr {
+  height: 30px;
+  border-style: solid;
+  border-color: white;
+  border-width: 1px 0 0 0;
+  border-radius: 20px;
+}
+
+hr:before {
+  display: block;
+  content: "";
+  height: 30px;
+  margin-top: -31px;
+  border-style: solid;
+  border-color: #8c8b8b;
+  border-width: 0 0 1px 0;
+  border-radius: 20px;
+}
+
+.header {
+  height: 100%;
+
+}
+
+.header .content {
+  padding-top: 18%;
+  color: white;
+}
+
+#nav {
+  margin-top: 30px;
+  background: -webkit-linear-gradient(135deg, rgba(25, 3, 22, 0.37) 0%, rgba(62, 44, 208, 0.12) 100%);
+  border-color: transparent;
+}
+
+#contact {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  height: 20%;
+}
+
+footer {
+  height: 100px;
+  padding-top: 30px;
+  background: -webkit-linear-gradient(135deg, rgba(25, 3, 22, 0.37) 0%, rgba(62, 44, 208, 0.12) 500%);
+}
+
