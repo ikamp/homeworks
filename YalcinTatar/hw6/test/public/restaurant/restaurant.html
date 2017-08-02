@@ -1,0 +1,16 @@
+<h2>Restoran Listesi</h2>
+
+<input type="text" class="form-control" ng-model="$ctrl.search" placeholder="Ara...">
+<ul>
+	<li ng-repeat="restaurant in $ctrl.restaurants | filter:$ctrl.search">
+		<p>
+			<span>{{$index + 1}}.{{restaurant.name}}</span>
+			<span class="btn-link" ng-click="$ctrl.restaurants.splice($index, 1)">Detaylar</span>
+
+		</p> 
+		<span>{{restaurant.snippet}}</p>
+	</li>
+</ul>
+</a>
+
+	

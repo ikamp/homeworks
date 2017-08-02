@@ -1,0 +1,16 @@
+<div class="col-xs-6 pull-left">
+    <div class="panel panel-default">
+        <h3>Sipariş Detayı</h3>
+        <div class="panel-body">
+            <li ng-repeat="item in order.items" class="list-group-item">
+                <b>Yemek Adi</b>:{{item.food.name}}
+                <br>Oluşturulma Tarihi: {{order.created_at}}
+                <br>Güncelleme Tarihi: {{order.updated_at}}
+                <br>Fiyatı: {{item.price}}
+                <br>Adedi: {{item.quantity}}
+                <br>Restaurant: {{order.restaurant.name}}
+
+            </li>
+        </div>
+    </div>
+</div>
